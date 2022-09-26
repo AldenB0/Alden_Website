@@ -13,7 +13,7 @@ import About from './Pages/About';
 
 export default function App() {
   return (
-    <Router>
+    <Router className="bg-Background">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

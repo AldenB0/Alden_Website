@@ -3,3 +3,47 @@
 @tailwind utilities;
 
 
+/* bounce in keyframes */
+@keyframes about {
+    0.0%{
+        transform: translate(0px, 15px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px, 0px);
+        opacity: 100;
+    }
+    50%{
+        transform: translate(0px, -3px);
+        opacity: 100;
+    }
+    78.5%{
+        transform: translate(0px, 2px);
+        opacity: 100;
+    }
+} 
+
+@keyframes imghover {
+    0.0%{
+        transform: translate(0px, 40px);
+        opacity: 100;
+    }
+    100%{
+        transform: translate(0px, 0px);
+        opacity: 100;
+    }
+    50%{
+        transform: translate(0px, -3px);
+        opacity: 100;
+    }
+    78.5%{
+        transform: translate(0px, 2px);
+        opacity: 100;
+    }
+} 
+
+
+.fade-in {
+    animation: about .75s ease 0s normal none;
+}
+/* bounce in keyframes*/

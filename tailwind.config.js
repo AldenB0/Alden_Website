@@ -6,7 +6,18 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'monarcha': ['monarcha', 'serif']
+        'display': ['monarcha', 'serif'],
+        'body': ['Montserrat', 'sans-serif'],
+      },
+      colors: {
+        Background: "#1e1e1f",
+        Rose: "#f28c95",
+        Green: "#0daf79",
+      },
+      backgroundColor: {
+        Background: "#1e1e1f",
+        Rose: "#f28c95",
+        Green: "#0daf79",
       }
     },
   },
