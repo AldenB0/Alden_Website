@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Alden_website/static/css/main.dca3a97a.css",
+    "main.js": "/Alden_website/static/js/main.a91fc8a8.js",
+    "index.html": "/Alden_website/index.html",
+    "main.dca3a97a.css.map": "/Alden_website/static/css/main.dca3a97a.css.map",
+    "main.a91fc8a8.js.map": "/Alden_website/static/js/main.a91fc8a8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dca3a97a.css",
+    "static/js/main.a91fc8a8.js"
+  ]
+}
