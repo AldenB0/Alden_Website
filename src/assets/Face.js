@@ -1,6 +1,6 @@
-import React from 'react';
-import '@lottiefiles/lottie-player';
-import { create } from '@lottiefiles/lottie-interactivity';
+import React from "react";
+import "@lottiefiles/lottie-player";
+import { create } from "@lottiefiles/lottie-interactivity";
 
 class Face extends React.Component {
   constructor(props) {
@@ -9,69 +9,68 @@ class Face extends React.Component {
   }
   componentDidMount() {
     // 3. listen for player load. see lottie player repo for other events
-    this.myRef.current.addEventListener('load', function (e) {
+    this.myRef.current.addEventListener("load", function (e) {
       // 4. configure the interactivity library
       create({
-        mode: 'chain',
-        player: '#Face',
+        mode: "chain",
+        player: "#Face",
         actions: [
-            {
-                state: 'autoplay',
-                frames: [1,104],
-                transition: 'onComplete',
-                delay: [970],
-                jumpTo: [2]
-                
-            },
-            {
-                state: 'autoplay',
-                frames: [2,104],
-                transition: 'onComplete',
-            },
-            {
-                state: 'loop',
-                frames: [105,239],
-                transition: "hover",
-            },
-            {
-                state: 'autoplay',
-                frames: [240,358],
-                transition: 'onComplete',
-            },
-            {
-                state: 'loop',
-                frames: [359,557],
-                transition: "hover",
-            },
-            {
-                state: 'autoplay',
-                frames: [558,737],
-                transition: 'onComplete',
-            },
-            {
-                state: 'loop',
-                frames: [738,901],
-                transition: "hover",
-            },
-            {
-                state: 'autoplay',
-                frames: [902,961],
-                transition: 'onComplete',
-            },
-            {
-                state: 'autoplay',
-                frames: [0,1],
-                transition: 'onComplete',
-                jumpTo: [1]
-            }
-          ],
+          {
+            state: "autoplay",
+            frames: [1, 104],
+            transition: "onComplete",
+            delay: [700],
+            jumpTo: [2],
+          },
+          {
+            state: "autoplay",
+            frames: [2, 104],
+            transition: "onComplete",
+          },
+          {
+            state: "loop",
+            frames: [105, 239],
+            transition: "hover",
+          },
+          {
+            state: "autoplay",
+            frames: [240, 358],
+            transition: "onComplete",
+          },
+          {
+            state: "loop",
+            frames: [359, 557],
+            transition: "hover",
+          },
+          {
+            state: "autoplay",
+            frames: [558, 737],
+            transition: "onComplete",
+          },
+          {
+            state: "loop",
+            frames: [738, 901],
+            transition: "hover",
+          },
+          {
+            state: "autoplay",
+            frames: [902, 961],
+            transition: "onComplete",
+          },
+          {
+            state: "autoplay",
+            frames: [0, 1],
+            transition: "onComplete",
+            jumpTo: [1],
+          },
+        ],
       });
     });
   }
   render() {
     return (
       <div className="Example">
-        <div style={{ height: '28px'}}></div>
+        <div style={{ height: "28px" }}></div>
         <lottie-player
           ref={this.myRef} // 2. set the reference for the player
           id="Face"

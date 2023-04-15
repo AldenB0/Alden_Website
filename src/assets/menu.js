@@ -1,6 +1,6 @@
-import React from 'react';
-import '@lottiefiles/lottie-player';
-import { create } from '@lottiefiles/lottie-interactivity';
+import React from "react";
+import "@lottiefiles/lottie-player";
+import { create } from "@lottiefiles/lottie-interactivity";
 
 class Menu extends React.Component {
   constructor(props) {
@@ -9,24 +9,24 @@ class Menu extends React.Component {
   }
   componentDidMount() {
     // 3. listen for player load. see lottie player repo for other events
-    this.myRef.current.addEventListener('load', function (e) {
+    this.myRef.current.addEventListener("load", function (e) {
       // 4. configure the interactivity library
       create({
-        mode: 'chain',
-        player: '#menu',
+        mode: "chain",
+        player: "#menu",
         actions: [
-            {
-                state: 'click',
-                frames: [1,43],
-                transition: 'onComplete',   
-            },
-            {
-                state: 'click',
-                frames: [44,78],
-                transition: 'onComplete',
-                reset: true,
-            }
-          ],
+          {
+            state: "click",
+            frames: [1, 43],
+            transition: "onComplete",
+          },
+          {
+            state: "click",
+            frames: [44, 78],
+            transition: "onComplete",
+            reset: true,
+          },
+        ],
       });
     });
   }
@@ -38,7 +38,7 @@ class Menu extends React.Component {
           id="menu"
           mode="normal"
           src="https://assets2.lottiefiles.com/temp_editor_files/lf30_editor_2ez0jydg.json"
-          style={{ height: '150px', width: '150px' }}
+          style={{ height: "150px", width: "150px" }}
         ></lottie-player>
       </div>
     );

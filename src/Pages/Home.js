@@ -1,31 +1,21 @@
-import '../index.css';
-import styles from '../style';
-import { Hero, Footer, VFC, Outside, Mitre} from '../components';
-import {Face} from '../assets'
+import "../index.css";
+import styles from "../style";
+import { Hero, Footer, VFC, Outside, Mitre } from "../components";
 
 const Home = () => (
-  <body>
-    <div className={`bg-Background ${styles.paddingX} ${styles.flexStart}`}>
-        <div className={`text-4xl font-display font-bold text-white ${styles.boxWidth}`}>
-          Hero 
-        </div>
-    </div>
-    
-    <div className={`bg-Background ${styles.paddingX} ${styles.flexStart}`}>
-      <div className={`text-4xl font-display font-bold text-white ${styles.boxWidth}`}>
+  <body className="bg-Background">
+    <div className={`${styles.flexStart}`}>
+      <div className={`${styles.boxWidth}`}>
         <Hero />
         <Mitre />
         <VFC />
         <Outside />
         <Footer />
+        <div style={{ height: "100vh" }}></div>{" "}
+        {/* Add an empty div with 100vh height */}
       </div>
     </div>
-
-    <div>
-      <Face />
-    </div>
   </body>
-)
-  
-  export default Home;
-  
+);
+
+export default Home;

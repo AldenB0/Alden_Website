@@ -46,7 +46,7 @@
 .fade-in {
     animation: about .75s ease 0s normal none;
 }
-/* bounce in keyframes*/
+/* bounce in keyframes end*/
 
 /* Nav bar hover code*/
 .nav_anim{
@@ -83,7 +83,29 @@
 .nav_anim :hover:after, .nav_anim :focus:after {
   transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
 }
+/* hero animation*/
 
+.hero-text1 { 
+  animation: about .75s ease .7s backwards
+}
+.hero-text2 { 
+  animation: about .75s ease .75s backwards
+}
+.hero-text3 { 
+  animation: about .75s ease .8s backwards
+}
+.hero-text4 { 
+  animation: about .75s ease .85s backwards
+}
+.hero-text5 { 
+  animation: about .75s ease .90s backwards
+}
+.hero-text6 { 
+  animation: about .75s ease 1s backwards
+}
+.hero-text7 { 
+  animation: about .75s ease 1.1s backwards
+}
 /* code snippits from tutorial */
 :root {
     --black-gradient: linear-gradient(
@@ -102,9 +124,9 @@
   .bg-black-gradient {
     background: linear-gradient(
       144.39deg,
-      #ffffff -278.56%,
-      #6d6d6d -78.47%,
-      #11101d 91.61%
+      #c0c0c1 -278.56%,
+      #858586 -78.47%,
+      #1E1E1F 91.61%
     );
   }
   
@@ -115,6 +137,11 @@
   .sidebar {
     -webkit-animation: about 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     animation: about 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  .reverse-sidebar {
+    -webkit-animation: reverse-about 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: reverse-about 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 0.5s; /* same duration as the pop-in animation */
   }
   
   @-webkit-keyframes slide-top {
@@ -136,6 +163,23 @@
     100% {
       -webkit-transform: translateY(0);
       transform: translateY(0);
+    }
+  }
+
+  .arrowFloat {
+    bottom: 0;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
     }
   }
   
@@ -166,7 +210,9 @@
     filter: blur(900px);
   }
   
-  .white__gradient {
-    background: rgba(255, 255, 255, 0.6);
-    filter: blur(750px);
+  .text__gradient {
+    background-image: linear-gradient(170deg, #F0A8AF 0%, #C22541 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
+  
