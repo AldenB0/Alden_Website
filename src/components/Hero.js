@@ -19,7 +19,7 @@ const Hero = () => (
             <span className="inline-block hero-text5">experience</span>{" "}
             <span className="inline-block hero-text6">designer.</span>
           </p>
-          <p className="leading-normal font-display text-white py-1 hero-text7 xl:text-[20px] lg:text-[16px] md:text-[14px] sm:text-[12px]">
+          <p className="leading-normal font-display text-white py-3 hero-text7 xl:text-[20px] lg:text-[16px] md:text-[14px] sm:text-[12px]">
             <span>Recent HCI Masters Graduate with an eye for detail</span>{" "}
             <br />
             <span>and compelling design.</span>
@@ -31,8 +31,10 @@ const Hero = () => (
       </div>
     </div>
 
-    <div className="w-full flex justify-center absolute bottom-0  arrowFloat">
-      <Arrow />
+    <div className="flex justify-center items-center w-full">
+      <div className="absolute bottom-0 arrowFloat">
+        <Arrow />
+      </div>
     </div>
   </section>
 );

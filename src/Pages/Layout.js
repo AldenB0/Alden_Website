@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { Link as Scroll } from "react-scroll";
+import { HashLink } from "react-router-hash-link";
 import "../index.css";
 import { Menu } from "../assets";
 import styles from "../style";
@@ -13,28 +14,24 @@ const Layout = () => {
     <body className="bg-Background">
       <>
         <nav
-          className={`flex ${styles.paddingX} py-5 justify-between items-center navbar text-lg`}
+          className={`flex ${styles.paddingX} py-5 justify-between items-center navbar text-lg sticky top-0 w-full z-50 bg-Background `}
         >
           <div className={`text-white font-display text-3xl font-bold`}>
             <Link to="/">Alden Brown.</Link>
           </div>
           <ul className="list-none sm:flex hidden justify-end items-center flex-1 ">
             <li className="font-body font-semibold text-white cursor-pointer mr-10 top-2 nav_anim">
-              <Link to="/">Home</Link>
+              <HashLink smooth to="//#mitre">
+                Work
+              </HashLink>
             </li>
             <li className="font-body font-semibold text-white cursor-pointer mr-10 top-2 nav_anim">
               <Link to="/About">About</Link>
             </li>
             <li className="font-body font-semibold text-white cursor-pointer top-2 nav_anim">
-              <Scroll
-                to="footer"
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={500}
-              >
+              <HashLink smooth to="//#footer">
                 Contact
-              </Scroll>
+              </HashLink>
             </li>
           </ul>
           {/* mobile navbar */}

@@ -28,7 +28,7 @@ class Arrow extends React.Component {
 
   render() {
     return (
-      <div className="h-[60px] -translate-x-14 -translate-y-14">
+      <div className="h-[60px] -translate-y-12">
         <lottie-player
           ref={this.myRef}
           id="arrow"
