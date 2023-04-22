@@ -23,6 +23,17 @@
     }
 } 
 
+@keyframes about-reverse {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
 @keyframes imghover {
     0.0%{
         transform: translate(0px, 40px);
@@ -66,8 +77,13 @@
   }
 
 
+
 .fade-in {
-    animation: about .75s ease 0s normal none;
+    animation: about 0.5s ease forwards;
+}
+
+.fade-in-rev {
+  animation: about-reverse 0.3s ease-in-out forwards;
 }
 /* bounce in keyframes end*/
 
@@ -129,6 +145,13 @@
 .hero-text7 { 
   animation: about .75s ease 1.5s backwards
 }
+
+.my-toast .Toastify__toast {
+  border-radius: 50px;
+  background-color: #39393A;
+}
+
+
 /* code snippits from tutorial */
 :root {
     --black-gradient: linear-gradient(

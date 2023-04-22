@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import { Icon } from "@iconify/react";
+import "../index.css";
 import ClipboardJS from "clipboard";
-import { toast } from "react-toastify";
+import { toast, ToastContainer, cssTransition } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Footer() {
   useEffect(() => {
@@ -15,10 +17,15 @@ function Footer() {
     navigator.clipboard.writeText(email);
   };
 
+  const bounceFade = cssTransition({
+    enter: "fade-in",
+    exit: "fade-in-rev",
+  });
+
   const notify = () =>
-    toast("email added to clipboard", {
+    toast("Email copied to clipboard", {
       position: "bottom-center",
-      autoClose: 1000,
+      autoClose: 2000,
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
@@ -28,51 +35,76 @@ function Footer() {
     });
 
   return (
-    <div id="footer" className="pt-28">
-      <div className="pb-60">
-        <h1 className="text-5xl font-bold font-display text-white text-center py-5">
-          Thanks <br></br> for hanging
-        </h1>
-        <h2 className="text-xl font-body font-bold text-white opacity-50 text-center py-5">
-          If you liked what you saw and want to work together,<br></br> shoot me
-          a message, and we'll figure something out.
-        </h2>
-        <div className="flex justify-center">
-          <ul className="flex justify-between list-none text-center font-bold font-body text-white py-5 w-1/2">
-            <Icon
-              icon="ic:round-email"
-              style={{ width: "25px", height: "25px" }}
-              className="icon cursor-pointer"
-              onClick={() => {
-                handleClick();
-                notify();
-              }}
-            />
-            <a
-              href="https://www.linkedin.com/in/alden-brown/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+    <>
+      <ToastContainer
+        className="my-toast"
+        style={{ textAlign: "center", width: "250px", borderRadius: "50px" }}
+        position="bottom-center"
+        autoClose={2000}
+        limit={3}
+        hideProgressBar
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        closeButton={false}
+        transition={bounceFade}
+      />
+      <div id="footer" className="pt-28">
+        <div className="pb-60">
+          <h1 className="text-5xl font-bold font-display text-white text-center py-5">
+            Thanks <br></br> for hanging
+          </h1>
+          <h2 className="text-xl font-body font-bold text-white opacity-50 text-center py-5">
+            If you liked what you saw and want to work together,<br></br> shoot
+            me a message, and we'll figure something out.
+          </h2>
+          <div className="flex justify-center">
+            <ul className="flex justify-between list-none text-center font-bold font-body text-white py-5 w-1/2">
               <Icon
-                icon="ri:linkedin-fill"
+                icon="ic:round-email"
                 style={{ width: "25px", height: "25px" }}
-                className="icon"
+                className="icon cursor-pointer"
+                onClick={() => {
+                  handleClick();
+                  notify();
+                }}
               />
-            </a>
-            <Icon
-              icon="mdi:resume"
-              style={{ width: "25px", height: "25px" }}
-              className="icon cursor-pointer"
-            />
-          </ul>
+              <a
+                href="https://www.linkedin.com/in/alden-brown/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon
+                  icon="ri:linkedin-fill"
+                  style={{ width: "25px", height: "25px" }}
+                  className="icon"
+                />
+              </a>
+              <a
+                href="https://drive.google.com/file/d/1xWwApoATRWt_vNbQ331tmdIq2qcdaY0T/view?usp=share_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon
+                  icon="mdi:resume"
+                  style={{ width: "25px", height: "25px" }}
+                  className="icon cursor-pointer"
+                />
+              </a>
+            </ul>
+          </div>
         </div>
+        <hr className="border-t border-white mt-5 mb-2 hidden" />
+        <p className="text-white text-xs font-body text-center pb-1 opacity-50">
+          Coded + Animated + Designed by{" "}
+          <span className="font-bold opacity-100">Alden Brown</span>
+        </p>
       </div>
-      <hr className="border-t border-white mt-5 mb-2 hidden" />
-      <p className="text-white text-xs font-body text-center pb-1 opacity-50">
-        Coded + Animated + Designed by{" "}
-        <span className="font-bold opacity-100">Alden Brown</span>
-      </p>
-    </div>
+    </>
   );
 }
 
