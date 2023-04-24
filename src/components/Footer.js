@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import "../index.css";
 import ClipboardJS from "clipboard";
@@ -34,6 +34,8 @@ function Footer() {
       theme: "dark",
     });
 
+  const [clicked, setClicked] = useState(false);
+
   return (
     <>
       <ToastContainer
@@ -55,24 +57,29 @@ function Footer() {
       />
       <div id="footer" className="pt-28">
         <div className="pb-60">
-          <h1 className="text-5xl font-bold font-display text-white text-center py-5">
+          <h1 className="md:text-5xl text-4xl font-bold font-display text-white text-center py-5">
             Thanks <br></br> for hanging
           </h1>
-          <h2 className="text-xl font-body font-bold text-white opacity-50 text-center py-5">
+          <h2 className="md:text-xl text-sm font-body font-bold text-white opacity-50 text-center py-5">
             If you liked what you saw and want to work together,<br></br> shoot
             me a message, and we'll figure something out.
           </h2>
           <div className="flex justify-center">
-            <ul className="flex justify-between list-none text-center font-bold font-body text-white py-5 w-1/2">
+            <ul className="flex justify-between list-none text-center font-bold font-body text-white py-5 w-72">
               <Icon
                 icon="ic:round-email"
                 style={{ width: "25px", height: "25px" }}
-                className="icon cursor-pointer"
+                className={`icon cursor-pointer ${clicked ? "clicked" : ""}`}
                 onClick={() => {
                   handleClick();
                   notify();
+                  setClicked(true);
+                  setTimeout(() => {
+                    setClicked(false);
+                  }, 300);
                 }}
               />
+
               <a
                 href="https://www.linkedin.com/in/alden-brown/"
                 target="_blank"

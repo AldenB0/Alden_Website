@@ -72,14 +72,14 @@
   transform: scale(1.35);
 }
 
-.icon-clicked {
-  animation: about 0.5s ease-in-out forwards;
-  }
-
+.icon.clicked {
+  opacity: 0.50;
+  transform: scale(1.15);
+}
 
 
 .fade-in {
-    animation: about 0.5s ease forwards;
+    animation: about 0.75s ease forwards;
 }
 
 .fade-in-rev {
