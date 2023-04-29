@@ -1,5 +1,5 @@
 import React from "react";
-import outside from "../assets/video/OutsideShowcase.mp4";
+import mcodeShowcase from "../assets/img/mcodeShowcase.png";
 
 import { Link } from "react-router-dom";
 
@@ -17,15 +17,11 @@ const Mitre = () => {
       </div>
       <Link to="/Coverage_CaseStudy">
         <div className="sm:h-[35rem] h-[25rem] rounded-3xl overflow-hidden flex justify-center video">
-          <video
-            autoPlay
-            loop
-            muted
+          <img
+            src={mcodeShowcase}
+            alt="mCODE Coverage Checker"
             className="object-cover w-full h-auto min-w-[60rem]"
-          >
-            <source src={outside} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          />
         </div>
       </Link>
     </div>

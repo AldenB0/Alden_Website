@@ -10,6 +10,8 @@ const styles = {
 
   marginX: "sm:mx-16 mx-6",
   marginY: "sm:my-16 my-6",
+
+  nImg: "w-full rounded-3xl object-cover min-w-[60rem] md:h-[35rem] h-[25rem]",
 };
 
 export const layout = {

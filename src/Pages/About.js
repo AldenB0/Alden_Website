@@ -14,11 +14,11 @@ const About = () => {
                 A Quick Introduction.
               </h1>
               <p className="font-body font-bold text-lg py-4">
-                I'm Alden, A graduate student currently studying in the
-                University of Maryland's Human-Computer Interaction program.
-                There, most of my time and effort is put into researching
-                problems and generating subsequent design solutions through a
-                myriad of different methods.
+                I'm a recent graduate from UMD's Human-Computer Interaction
+                masters program and have spent the past year working at MITRE as
+                a User Experience Engineer. There I was involved in all aspects
+                of the product design pipeline doing research, design, and
+                front-end development for various projects.
               </p>
               <p className="font-body text-sm py-2">
                 Before this, I completed my Bachelor's in psychology with a
