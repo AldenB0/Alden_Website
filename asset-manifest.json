@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Alden_website/static/css/main.de818f21.css",
-    "main.js": "/Alden_website/static/js/main.9db2d9e3.js",
+    "main.js": "/Alden_website/static/js/main.a65553bd.js",
     "static/media/mcodeShowcase.png": "/Alden_website/static/media/mcodeShowcase.648f2731c21599ff9d3d.png",
     "static/media/OutsideShowcase.mp4": "/Alden_website/static/media/OutsideShowcase.efe20d2f689908978104.mp4",
     "static/media/headshotc.jpg": "/Alden_website/static/media/headshotc.35dc2feb66d973d362be.jpg",
     "index.html": "/Alden_website/index.html",
     "main.de818f21.css.map": "/Alden_website/static/css/main.de818f21.css.map",
-    "main.9db2d9e3.js.map": "/Alden_website/static/js/main.9db2d9e3.js.map"
+    "main.a65553bd.js.map": "/Alden_website/static/js/main.a65553bd.js.map"
   },
   "entrypoints": [
     "static/css/main.de818f21.css",
-    "static/js/main.9db2d9e3.js"
+    "static/js/main.a65553bd.js"
   ]
 }
