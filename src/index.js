@@ -12,7 +12,7 @@ import OutsidePro from "./Pages/Projects/OutsidePro";
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/Alden-Website/#">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
