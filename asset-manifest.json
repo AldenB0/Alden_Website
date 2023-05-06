@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Alden_Website/static/css/main.de818f21.css",
-    "main.js": "/Alden_Website/static/js/main.3923e266.js",
-    "static/media/mcodeShowcase.png": "/Alden_Website/static/media/mcodeShowcase.648f2731c21599ff9d3d.png",
-    "static/media/OutsideShowcase.mp4": "/Alden_Website/static/media/OutsideShowcase.efe20d2f689908978104.mp4",
-    "static/media/headshotc.jpg": "/Alden_Website/static/media/headshotc.35dc2feb66d973d362be.jpg",
-    "index.html": "/Alden_Website/index.html",
-    "main.de818f21.css.map": "/Alden_Website/static/css/main.de818f21.css.map",
-    "main.3923e266.js.map": "/Alden_Website/static/js/main.3923e266.js.map"
+    "main.css": "/static/css/main.de818f21.css",
+    "main.js": "/static/js/main.4ca300ea.js",
+    "static/media/mcodeShowcase.png": "/static/media/mcodeShowcase.648f2731c21599ff9d3d.png",
+    "static/media/OutsideShowcase.mp4": "/static/media/OutsideShowcase.efe20d2f689908978104.mp4",
+    "static/media/headshotc.jpg": "/static/media/headshotc.35dc2feb66d973d362be.jpg",
+    "index.html": "/index.html",
+    "main.de818f21.css.map": "/static/css/main.de818f21.css.map",
+    "main.4ca300ea.js.map": "/static/js/main.4ca300ea.js.map"
   },
   "entrypoints": [
     "static/css/main.de818f21.css",
-    "static/js/main.3923e266.js"
+    "static/js/main.4ca300ea.js"
   ]
 }
