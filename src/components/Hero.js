@@ -5,7 +5,7 @@ import { Face } from "../assets/";
 import { Arrow } from "../assets/";
 
 const Hero = () => (
-  <section id="home" className="h-screen">
+  <section className="h-screen">
     <div
       className={`flex h-5/6 md:flex-row ${styles.flexCenter} flex-col ${styles.paddingY} `}
     >
