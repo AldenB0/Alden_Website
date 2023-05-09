@@ -23,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "add-domain && gh-pages -d build",
+    "deploy": "npm run add-domain && gh-pages -d build",
     "build": "react-scripts build",
     "add-domain": "echo \"aldenbrown.me\" > build/CNAME",
     "bd": "npm run build && npm run deploy",

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const VFC = () => {
   return (
-    <div id="mitre" className="w-5/6 sm:py-16 py-10">
+    <div id="mitre" className=" hidden w-5/6 sm:py-16 py-10">
       <div className="text-white py-3">
         <h3 className="text-Blue font-display text-lg">UMD</h3>
         <h1 className="md:text-4xl text-3xl font-bold font-display">
