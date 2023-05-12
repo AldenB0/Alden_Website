@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.css";
 import ScrollToTop from "./components/ScrollToTop";
-import { Helmet } from "react-helmet";
 
 import Layout from "./Pages/Layout";
 import Home from "./Pages/Home";
@@ -12,20 +11,10 @@ import Coverage from "./Pages/Projects/CoverageChecker";
 import RePicturePro from "./Pages/Projects/RePicturePro";
 import VFCPro from "./Pages/Projects/VFCProg";
 import OutsidePro from "./Pages/Projects/OutsidePro";
-import HeroImg from "./assets/img/Hero.png";
 
 export default function App() {
   return (
     <Router basename="/">
-      <Helmet>
-        <meta property="og:title" content="Alden Brown" />
-        <meta
-          property="og:description"
-          content="A UX portfolio site for Alden Brown"
-        />
-        <meta property="og:url" content="https://aldenbrown.me/" />
-        <meta property="og:image" content={HeroImg} />
-      </Helmet>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
