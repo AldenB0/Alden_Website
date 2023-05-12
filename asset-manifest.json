@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.693fb816.css",
-    "main.js": "/static/js/main.38ad0b90.js",
+    "main.js": "/static/js/main.19e39da9.js",
     "static/media/RePictureP.mp4": "/static/media/RePictureP.0560bd24681b0fccb8e9.mp4",
     "static/media/mcodeShowcase.png": "/static/media/mcodeShowcase.648f2731c21599ff9d3d.png",
     "static/media/Heuristic eval blue.png": "/static/media/Heuristic eval blue.75401c3b5f90cc998a40.png",
@@ -17,16 +17,15 @@
     "static/media/user input screens.png": "/static/media/user input screens.abd520977a3544c16421.png",
     "static/media/Wireframes.png": "/static/media/Wireframes.40c4433c666e1678d5d3.png",
     "static/media/User J stacked.png": "/static/media/User J stacked.0d8908a597b3db34f150.png",
-    "static/media/Hero.png": "/static/media/Hero.6af0295a10a666a187f7.png",
     "static/media/quotes.png": "/static/media/quotes.bc652138c2a28decbc70.png",
     "static/media/input stats.png": "/static/media/input stats.df50ca76f4fc328c1685.png",
     "static/media/usability stats.png": "/static/media/usability stats.1af2bc9009957ecd311c.png",
     "index.html": "/index.html",
     "main.693fb816.css.map": "/static/css/main.693fb816.css.map",
-    "main.38ad0b90.js.map": "/static/js/main.38ad0b90.js.map"
+    "main.19e39da9.js.map": "/static/js/main.19e39da9.js.map"
   },
   "entrypoints": [
     "static/css/main.693fb816.css",
-    "static/js/main.38ad0b90.js"
+    "static/js/main.19e39da9.js"
   ]
 }
