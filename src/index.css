@@ -6,6 +6,12 @@ html, body {
   background-color: #1E1E1F;
 }
 
+ul {
+  list-style-type: disc;
+  margin-left: 1rem;
+}
+
+
 
 /* bounce in keyframes */
 @keyframes about {
