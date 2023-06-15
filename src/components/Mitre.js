@@ -9,7 +9,7 @@ const Mitre = () => {
       <div className="text-white py-3">
         <h3 className="text-Blue font-display text-lg">MITRE</h3>
         <h1 className="md:text-4xl text-3xl font-bold font-display">
-          mCODE Coverage Checker
+          mCODE Coverage Checker (Under Construction)
         </h1>
         <h2 className="md:text-base text-sm font-bold font-body opacity-50 pt-2">
           An app designed to explore fluid interactions and user motivation.

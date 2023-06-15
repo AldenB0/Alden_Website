@@ -33,7 +33,7 @@ class Arrow extends React.Component {
           ref={this.myRef}
           id="arrow"
           mode="normal"
-          src="https://lottie.host/eded3de7-9ca5-4767-a801-6615a0163cf4/8wc9sfYViw.json"
+          src="https://assets6.lottiefiles.com/packages/lf20_WoQGzCBqcG.json"
           style={{ height: "160px", width: "350px" }}
         ></lottie-player>
       </div>
