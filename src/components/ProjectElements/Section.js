@@ -4,6 +4,7 @@ const Section = ({
   title,
   callout,
   text,
+  text2,
   listItems = [],
   pros = [],
   protitle,
@@ -26,6 +27,7 @@ const Section = ({
           ))}
         </ul>
       )}
+      <p className="font-body md:text-lg text-md pt-5">{text2}</p>
       {(pros.length > 0 || cons.length > 0) && (
         <div>
           <div className="flex flex-row justify-between">

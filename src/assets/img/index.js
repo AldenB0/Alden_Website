@@ -12,6 +12,16 @@ import Input from "./user input screens.png";
 import InputStats from "./input stats.png";
 import Quotes from "./quotes.png";
 import UserFlows from "./user flows.png";
+import OldToNew from "./IMG old to new.png";
+import Timeline from "./IMG timeline.png";
+import Persona from "./Persona.png";
+import Goal1 from "./Goal 1.png";
+import Goal2 from "./Goal 2.png";
+import Goal3 from "./Goal 3.png";
+import StyleGuide from "./style guide.png";
+import mcodeQuotes from "./mCODE quotes.png";
+import Settings from "./settings.png";
+import AdvOptions from "./Advanced options.png";
 /* REMEMBER TO USE FOR EXPORTING FILES */
 
 export {
@@ -29,4 +39,14 @@ export {
   InputStats,
   Quotes,
   UserFlows,
+  OldToNew,
+  Timeline,
+  Persona,
+  Goal1,
+  Goal2,
+  Goal3,
+  StyleGuide,
+  mcodeQuotes,
+  Settings,
+  AdvOptions,
 };
