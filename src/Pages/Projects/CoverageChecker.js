@@ -199,7 +199,7 @@ const Coverage = () => {
           <Section
             callout={
               <>
-                <span className="text-3xl">
+                <span className="md:text-3xl text-xl">
                   Goal 1: Deliver compelling visualizations that support various
                   levels of granularity.
                 </span>
@@ -215,7 +215,7 @@ const Coverage = () => {
           <Section
             callout={
               <>
-                <span className="text-3xl">
+                <span className="md:text-3xl text-xl">
                   Goal 2: Provide a frictionless method for uploading FHIR
                   bundles and connecting FHIR servers
                 </span>
@@ -229,7 +229,7 @@ const Coverage = () => {
           <Section
             callout={
               <>
-                <span className="text-3xl">
+                <span className="md:text-3xl text-xl">
                   Goal 3: If possible, work in additional features that address
                   concerns presented during user interviews.
                 </span>
@@ -291,7 +291,7 @@ const Coverage = () => {
           <Section
             callout={
               <>
-                <span className="text-3xl">
+                <span className="md:text-3xl text-xl">
                   1. Advanced options for adding FHIR servers{" "}
                 </span>
               </>
@@ -304,7 +304,7 @@ const Coverage = () => {
           <Section
             callout={
               <>
-                <span className="text-3xl">
+                <span className="md:text-3xl text-xl">
                   2. Users needed a way to filter what data the system did and
                   didn’t scan for.
                 </span>
