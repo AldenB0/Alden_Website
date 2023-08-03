@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9140a533.css",
-    "main.js": "/static/js/main.faa8b05d.js",
+    "main.css": "/static/css/main.98ba7ee0.css",
+    "main.js": "/static/js/main.ca1652fa.js",
     "static/media/RePictureP.mp4": "/static/media/RePictureP.0560bd24681b0fccb8e9.mp4",
     "static/media/mCodeVid.mp4": "/static/media/mCodeVid.5bf7d782d1dfbb726c34.mp4",
     "static/media/mcodeShowcase.png": "/static/media/mcodeShowcase.648f2731c21599ff9d3d.png",
@@ -18,15 +18,25 @@
     "static/media/user input screens.png": "/static/media/user input screens.abd520977a3544c16421.png",
     "static/media/Wireframes.png": "/static/media/Wireframes.40c4433c666e1678d5d3.png",
     "static/media/User J stacked.png": "/static/media/User J stacked.0d8908a597b3db34f150.png",
+    "static/media/style guide.png": "/static/media/style guide.ab7d0d03dcb293183dab.png",
+    "static/media/Goal 1.png": "/static/media/Goal 1.8fa4fdb5680fa1993e61.png",
+    "static/media/Persona.png": "/static/media/Persona.59afc930c9d10115f60c.png",
+    "static/media/Advanced options.png": "/static/media/Advanced options.347315b1a372ee4d0e29.png",
+    "static/media/IMG old to new.png": "/static/media/IMG old to new.78f26e659126547407ec.png",
+    "static/media/IMG timeline.png": "/static/media/IMG timeline.3243ba67190e83747b16.png",
+    "static/media/Goal 2.png": "/static/media/Goal 2.fbfb99bdd8e768d859ab.png",
+    "static/media/settings.png": "/static/media/settings.0421f9e7c326b7ef3814.png",
+    "static/media/mCODE quotes.png": "/static/media/mCODE quotes.572fcfaa2329f2cc39c2.png",
+    "static/media/Goal 3.png": "/static/media/Goal 3.2b249a8c43013029a63d.png",
     "static/media/quotes.png": "/static/media/quotes.bc652138c2a28decbc70.png",
     "static/media/input stats.png": "/static/media/input stats.df50ca76f4fc328c1685.png",
     "static/media/usability stats.png": "/static/media/usability stats.1af2bc9009957ecd311c.png",
     "index.html": "/index.html",
-    "main.9140a533.css.map": "/static/css/main.9140a533.css.map",
-    "main.faa8b05d.js.map": "/static/js/main.faa8b05d.js.map"
+    "main.98ba7ee0.css.map": "/static/css/main.98ba7ee0.css.map",
+    "main.ca1652fa.js.map": "/static/js/main.ca1652fa.js.map"
   },
   "entrypoints": [
-    "static/css/main.9140a533.css",
-    "static/js/main.faa8b05d.js"
+    "static/css/main.98ba7ee0.css",
+    "static/js/main.ca1652fa.js"
   ]
 }
