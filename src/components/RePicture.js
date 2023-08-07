@@ -11,7 +11,7 @@ const RePicture = () => {
           RePicture
         </h1>
         <h2 className="md:text-base text-sm font-bold font-body opacity-50 pt-2">
-          An app designed to explore fluid interactions and user motovation.
+          Redesigning a job search platform to meet the needs of recruiters.
         </h2>
       </div>
       <Link to="/RePicture_CaseStudy">

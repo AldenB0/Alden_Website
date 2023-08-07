@@ -40,35 +40,31 @@ const Coverage = () => {
         <div className="md:max-w-[70%] max-w-[90%] w-full">
           <div className="flex flex-col justify-center text-white pt-20">
             <h2 className=" text-lg font-body font-bold text-Blue">
-              Ux Design · Ux Research · Front-end Development
+              Ux Design
             </h2>
             <h1 className="md:text-6xl text-5xl font-bold font-display">
-              mCode Coverage Checker
+              Outside
             </h1>
-            <p className="pt-2 font-body">
-              The mCode Coverage Checker is a tool designed to enable a given
-              health system to understand how much of the mCODE standard they
-              support through an intuitive dashboard and data upload system.
-            </p>
+            <p className="pt-2 font-body">PLACE HOLDER TEXT</p>
             <div>
               <div className="flex sm:flex-row flex-col justify-between gap-x-4 my-12">
                 <div className="flex flex-col sm:max-w-[15rem] font-body">
                   <h3 className="md:text-lg text-md font-bold opacity-50">
                     Role
                   </h3>
-                  <p>Lead Designer, Lead Researcher, Front-end dev</p>
+                  <p>Designer</p>
                 </div>
                 <div className="flex flex-col sm:max-w-[15rem] sm:pt-0 pt-4 font-body">
                   <h3 className="md:text-lg text-md font-bold opacity-50">
                     Team
                   </h3>
-                  <p>1 UX Designer, 3 Developers</p>
+                  <p>Solo</p>
                 </div>
                 <div className="flex flex-col sm:max-w-[15rem] sm:pt-0 pt-4 font-body">
                   <h3 className="md:text-lg text-md font-bold opacity-50">
                     Duration
                   </h3>
-                  <p>June 2022 - June 2023</p>
+                  <p>February 2021 - June 2022</p>
                 </div>
                 <div className="flex flex-col sm:max-w-[15rem] sm:pt-0 pt-4 font-body">
                   <h3 className="md:text-lg text-md font-bold opacity-50">
@@ -107,7 +103,7 @@ const Coverage = () => {
 
           <Video
             src={mCodeVid}
-            videoStyle="object-cover mix-blend-lighten md:w-[80%] h-auto min-w-[45rem]"
+            videoStyle="object-cover mix-blend-lighten md:w-[80%] h-auto min-w-[23rem]"
           />
 
           <Section

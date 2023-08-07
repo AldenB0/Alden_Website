@@ -11,10 +11,10 @@ const Outside = () => {
           Outside (Under Construction)
         </h1>
         <h2 className="md:text-base text-sm font-bold font-body opacity-50 pt-2">
-          An app designed to explore fluid interactions and user motovation.
+          An app designed to explore fluid interactions and user motivation.
         </h2>
       </div>
-      <Link to="/Outside_CaseStudy">
+      <div /*to="/Outside_CaseStudy"*/>
         <div className="sm:h-[35rem] h-[25rem] rounded-3xl overflow-hidden flex justify-center video">
           <video
             autoPlay
@@ -26,9 +26,11 @@ const Outside = () => {
             Your browser does not support the video tag.
           </video>
         </div>
-      </Link>
+      </div>
     </div>
   );
 };
 
 export default Outside;
+
+/* <Link to="/Outside_CaseStudy"> */
