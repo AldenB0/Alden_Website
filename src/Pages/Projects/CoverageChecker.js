@@ -203,7 +203,7 @@ const Coverage = () => {
           <Section
             callout={
               <>
-                <span className="md:text-3xl text-xl">
+                <span className="md:text-2xl text-xl">
                   Goal 1: Deliver compelling visualizations that support various
                   levels of granularity.
                 </span>
@@ -219,7 +219,7 @@ const Coverage = () => {
           <Section
             callout={
               <>
-                <span className="md:text-3xl text-xl">
+                <span className="md:text-2xl text-xl">
                   Goal 2: Provide a frictionless method for uploading FHIR
                   bundles and connecting FHIR servers
                 </span>
@@ -233,7 +233,7 @@ const Coverage = () => {
           <Section
             callout={
               <>
-                <span className="md:text-3xl text-xl">
+                <span className="md:text-2xl text-xl">
                   Goal 3: If possible, work in additional features that address
                   concerns presented during user interviews.
                 </span>

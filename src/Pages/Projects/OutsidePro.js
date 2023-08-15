@@ -68,7 +68,7 @@ const OutsidePro = () => {
 
           <Highlight
             color="bg-Green"
-            boxH="sm:h-56 h-64"
+            boxH="sm:h-56 h-64 opacity-50"
             text="“A detailed, cute, and fun app filled with aesthetic delight and visually compelling information. 👍”"
             quote="- Dr. Jason Alexander"
           />
@@ -110,7 +110,7 @@ const OutsidePro = () => {
           <Section
             callout={
               <>
-                <span className="md:text-3xl text-xl font-normal">
+                <span className="md:text-2xl text-xl font-normal">
                   Concept:
                 </span>
               </>
@@ -121,7 +121,7 @@ const OutsidePro = () => {
           <Section
             callout={
               <>
-                <span className="md:text-3xl text-xl font-normal">
+                <span className="md:text-2xl text-xl font-normal">
                   Visual Design:
                 </span>
               </>
@@ -130,17 +130,6 @@ const OutsidePro = () => {
           />
 
           <Img imgSrc={Insp} imgStyle="lg:max-w-[60%] sm:max-w-[80%]" />
-
-          <Section
-            callout={
-              <>
-                <span className="md:text-3xl text-xl font-normal">
-                  Visual Design:
-                </span>
-              </>
-            }
-            text="The visual design was chiefly inspired by monochromatic vector art; however, while it is very appealing, it can end up looking flat on a small screen. So to alleviate some of these issues, I eventually decided to incorporate noise into the main scene to give it some texture and depth. Both of these visual styles were picked because of their ability to instantly convey a soothing yet fresh feeling on the user, which is a crucial element for a motivational app where the visuals play a key role in the motivation incentives."
-          />
 
           <Section
             title="Design"
@@ -163,7 +152,7 @@ const OutsidePro = () => {
           <Section
             callout={
               <>
-                <span className="md:text-3xl text-xl font-normal">
+                <span className="md:text-2xl text-xl font-normal">
                   Color Palette
                 </span>
               </>
@@ -176,7 +165,7 @@ const OutsidePro = () => {
           <Section
             callout={
               <>
-                <span className="md:text-3xl text-xl font-normal">
+                <span className="md:text-2xl text-xl font-normal">
                   Typography
                 </span>
               </>
@@ -189,7 +178,7 @@ const OutsidePro = () => {
           <Section
             callout={
               <>
-                <span className="md:text-3xl text-xl font-normal">
+                <span className="md:text-2xl text-xl font-normal">
                   Stylistic Identity
                 </span>
               </>

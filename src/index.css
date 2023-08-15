@@ -135,27 +135,30 @@ ul {
 /* hero animation*/
 
 .hero-text1 { 
-  animation: about .75s ease .75s backwards
+  animation: about .75s ease .55s backwards
 }
 .hero-text2 { 
-  animation: about .75s ease .75s backwards
+  animation: about .75s ease .6s backwards
 }
 .hero-text3 { 
-  animation: about .75s ease .8s backwards
+  animation: about .75s ease .65s backwards
 }
 .hero-text4 { 
-  animation: about .75s ease 1.1s backwards
+  animation: about .75s ease .9s backwards
 }
 .hero-text5 { 
-  animation: about .75s ease 1.15s backwards
+  animation: about .75s ease .95s backwards
 }
 .hero-text6 { 
-  animation: about .75s ease 1.2s backwards
+  animation: about .75s ease 1s backwards
 }
 .hero-text7 { 
-  animation: about .75s ease 1.5s backwards
+  animation: about .75s ease 1.3s backwards
 }
 
+.face-anim { 
+  animation: about .75s ease .7s backwards
+}
 .my-toast .Toastify__toast {
   border-radius: 50px;
   background-color: #39393A;

@@ -26,7 +26,7 @@ const Hero = () => (
           </p>
         </div>
       </div>
-      <div className="hero-text1 relative lg:left-24 md:w-1/2 ">
+      <div className="face-anim relative lg:left-24 md:w-1/2 ">
         <Face />
       </div>
     </div>

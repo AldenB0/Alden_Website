@@ -19,7 +19,7 @@ class Face extends React.Component {
             state: "autoplay",
             frames: [1, 104],
             transition: "onComplete",
-            delay: [700],
+            delay: [650],
             jumpTo: [2],
           },
           {
