@@ -49,7 +49,7 @@ const RePicturePro = () => {
         <div className="md:max-w-[70%] max-w-[90%] w-full">
           <div className="flex flex-col justify-center text-white pt-20">
             <h2 className=" text-lg font-body font-bold text-Green">
-              Ux Design · Ux Research
+              UX Design · UX Research
             </h2>
             <p className="md:text-6xl text-5xl font-bold font-display">
               RePicture

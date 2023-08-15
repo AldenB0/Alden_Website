@@ -40,12 +40,20 @@ const Coverage = () => {
         <div className="md:max-w-[70%] max-w-[90%] w-full">
           <div className="flex flex-col justify-center text-white pt-20">
             <h2 className=" text-lg font-body font-bold text-Blue">
-              Ux Design
+              UX Design
             </h2>
             <h1 className="md:text-6xl text-5xl font-bold font-display">
-              Outside
+              mCODE Coverage Checker
             </h1>
-            <p className="pt-2 font-body">PLACE HOLDER TEXT</p>
+            <p className="pt-2 font-body">
+              A tool designed to enable a given health system to understand how
+              much of the mCODE standard* they support through an intuitive
+              dashboard and data upload system. <br /> <br />{" "}
+              <span className="opacity-75">
+                *An open-source standard for Oncology health data positioning
+                itself to replace the current EHR systems{" "}
+              </span>
+            </p>
             <div>
               <div className="flex sm:flex-row flex-col justify-between gap-x-4 my-12">
                 <div className="flex flex-col sm:max-w-[15rem] font-body">
