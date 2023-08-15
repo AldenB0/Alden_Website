@@ -241,18 +241,29 @@ const OutsidePro = () => {
 
           <Video
             src={Rec}
-            videoStyle="object-cover lg:w-[60%] h-auto min-w-[23rem]"
+            videoStyle="object-cover lg:w-[80%] h-auto min-w-[30rem]"
           />
 
           <Section text="On top of this, the ability to review a park was included to help feed the recommendation system and improve the user's overall experience." />
 
           <Section
             title="Design"
-            callout="Motion Design"
+            callout={
+              <>
+                Motion Design{" "}
+                <span className="text-sm opacity-75 font-normal">
+                  Tools: Smart Animate, Adobe After Effects, Lottie
+                </span>
+              </>
+            }
             text="Now with the core of the design completed, I went about adding motion design to accomplish two essential tasks. The first is increasing screen comprehension by drawing the user to elements that change from one state to the next. This is most obviously seen in the review progress bar, but it is also utilized in the maps animation. The other task is motivating the user through visual appeal. This is most obviously seen on the main screen, where if the user meets their goal for the week, they will be rewarded with specific elements of the landscape beginning to move."
           />
 
-          <Video src={Motion} videoStyle="object-cover w-full max-h-[41rem]" />
+          <Video
+            src={Motion}
+            videoStyle="object-cover w-full max-h-[41rem]"
+            divStyle="max-w-[60rem] mx-auto"
+          />
 
           <Section title="Design" callout="Final Designs" />
 
