@@ -1,17 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.96c4a1f4.css",
-    "main.js": "/static/js/main.41e1c7b7.js",
+    "main.css": "/static/css/main.ee221ceb.css",
+    "main.js": "/static/js/main.e82295aa.js",
     "static/media/RePictureP.mp4": "/static/media/RePictureP.0560bd24681b0fccb8e9.mp4",
     "static/media/mCodeVid.mp4": "/static/media/mCodeVid.5bf7d782d1dfbb726c34.mp4",
     "static/media/mcodeShowcase.png": "/static/media/mcodeShowcase.648f2731c21599ff9d3d.png",
     "static/media/Heuristic eval blue.png": "/static/media/Heuristic eval blue.75401c3b5f90cc998a40.png",
+    "static/media/recLoop.webm": "/static/media/recLoop.415385f4a5a0a194d624.webm",
     "static/media/OutsideShowcase.mp4": "/static/media/OutsideShowcase.efe20d2f689908978104.mp4",
     "static/media/project page change.png": "/static/media/project page change.22e414b03e0f40acea9a.png",
+    "static/media/Final design.png": "/static/media/Final design.58312487b891325786b9.png",
+    "static/media/Dataviz.webm": "/static/media/Dataviz.8c59b33a54a4c568dcf5.webm",
+    "static/media/App Design Mockup 5.png": "/static/media/App Design Mockup 5.6cd76f6405fe9be58372.png",
     "static/media/user flows.png": "/static/media/user flows.8bf84ca399ad5c9f7d9a.png",
+    "static/media/MotionDesign.webm": "/static/media/MotionDesign.5c557ccd0efd273031dd.webm",
     "static/media/landscape vs T.webm": "/static/media/landscape vs T.fe0062cf92bb4390eb92.webm",
     "static/media/RepictureCover.png": "/static/media/RepictureCover.fae9ab9355178f727c34.png",
-    "static/media/sketches.png": "/static/media/sketches.f2ba35e796a95b640c00.png",
+    "static/media/sketches.png": "/static/media/sketches.b8251d21f941bcb07c49.png",
+    "static/media/inspiration.png": "/static/media/inspiration.ed29811a89c8577622b6.png",
+    "static/media/HomepageEvo.png": "/static/media/HomepageEvo.2b02f502fa1a3e8c6255.png",
     "static/media/profile page change.png": "/static/media/profile page change.d12e68bf315066222d51.png",
     "static/media/headshotc.jpg": "/static/media/headshotc.35dc2feb66d973d362be.jpg",
     "static/media/blur Affinity Diagram.png": "/static/media/blur Affinity Diagram.67ccd454b1d4b07f9746.png",
@@ -30,14 +37,17 @@
     "static/media/mCODE quotes.png": "/static/media/mCODE quotes.572fcfaa2329f2cc39c2.png",
     "static/media/Goal 3.png": "/static/media/Goal 3.2b249a8c43013029a63d.png",
     "static/media/quotes.png": "/static/media/quotes.bc652138c2a28decbc70.png",
+    "static/media/old.png": "/static/media/old.9844d8634d8d1a0fd315.png",
     "static/media/input stats.png": "/static/media/input stats.df50ca76f4fc328c1685.png",
+    "static/media/color.png": "/static/media/color.cdde2e6730c5f0465f8a.png",
     "static/media/usability stats.png": "/static/media/usability stats.1af2bc9009957ecd311c.png",
+    "static/media/font.png": "/static/media/font.99a2e5772aee3d337ead.png",
     "index.html": "/index.html",
-    "main.96c4a1f4.css.map": "/static/css/main.96c4a1f4.css.map",
-    "main.41e1c7b7.js.map": "/static/js/main.41e1c7b7.js.map"
+    "main.ee221ceb.css.map": "/static/css/main.ee221ceb.css.map",
+    "main.e82295aa.js.map": "/static/js/main.e82295aa.js.map"
   },
   "entrypoints": [
-    "static/css/main.96c4a1f4.css",
-    "static/js/main.41e1c7b7.js"
+    "static/css/main.ee221ceb.css",
+    "static/js/main.e82295aa.js"
   ]
 }
