@@ -6,7 +6,7 @@ const Video = ({ src, divStyle, videoStyle }) => {
 
   return (
     <div className={combinedDivStyle}>
-      <video autoPlay loop muted className={videoStyle}>
+      <video autoPlay loop muted playsInline className={videoStyle}>
         <source src={src} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

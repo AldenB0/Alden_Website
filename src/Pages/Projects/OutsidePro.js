@@ -68,7 +68,7 @@ const OutsidePro = () => {
 
           <Highlight
             color="bg-Green"
-            boxH="sm:h-56 h-64 opacity-50"
+            boxH="sm:h-56 h-64 opacity-75"
             text="“A detailed, cute, and fun app filled with aesthetic delight and visually compelling information. 👍”"
             quote="- Dr. Jason Alexander"
           />

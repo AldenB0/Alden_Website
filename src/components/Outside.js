@@ -3,6 +3,13 @@ import outside from "../assets/video/OutsideShowcase.mp4";
 import { Link } from "react-router-dom";
 
 const Outside = () => {
+  const videoHTML = `
+    <video autoplay loop muted playsinline class="object-cover w-full h-auto min-w-[60rem]">
+      <source src="${outside}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  `;
+
   return (
     <div id="mitre" className="w-5/6 sm:py-16 py-10">
       <Link to="/Outside_CaseStudy">
@@ -15,22 +22,13 @@ const Outside = () => {
             An app designed to explore fluid interactions and user motivation.
           </h2>
         </div>
-        <div className="sm:h-[35rem] h-[25rem] rounded-3xl overflow-hidden flex justify-center video">
-          <video
-            autoPlay
-            loop
-            muted
-            className="object-cover w-full h-auto min-w-[60rem]"
-          >
-            <source src={outside} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+        <div
+          className="sm:h-[35rem] h-[25rem] rounded-3xl overflow-hidden flex justify-center video"
+          dangerouslySetInnerHTML={{ __html: videoHTML }}
+        />
       </Link>
     </div>
   );
 };
 
 export default Outside;
-
-/* <Link to="/Outside_CaseStudy"> */
