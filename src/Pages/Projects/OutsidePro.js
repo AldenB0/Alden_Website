@@ -8,8 +8,9 @@ import {
   Highlight,
 } from "../../components/ProjectElements";
 import landscape from "../../assets/video/landscape vs T.webm";
+import landscapeBg from "../../assets/video/landscapeVs_bg.mp4";
 import Dataviz from "../../assets/video/Dataviz.webm";
-import Motion from "../../assets/video/MotionDesign.webm";
+import Motion from "../../assets/video/MotionDesign.mp4";
 import Rec from "../../assets/video/recLoop.webm";
 import {
   Mockup,
