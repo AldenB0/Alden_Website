@@ -24,7 +24,7 @@ import {
 
 const OutsidePro = () => {
   return (
-    <div className="bg-Background">
+    <div className="bg-Background overflow-x-hidden">
       <div className={`${styles.flexStart}`}>
         <div className="md:max-w-[70%] max-w-[90%] w-full">
           <div className="flex flex-col justify-center text-white pt-20">
@@ -204,7 +204,7 @@ const OutsidePro = () => {
 
           <Video
             src={landscape}
-            videoStyle="object-cover mix-blend-lighten md:w-[80%] h-auto min-w-[23rem]"
+            videoStyle="object-cover md:w-[80%] h-auto min-w-[23rem]"
           />
 
           <Section
