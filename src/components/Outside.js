@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Outside = () => {
   const videoHTML = `
-    <video autoplay loop muted playsinline class="object-cover w-full h-auto min-w-[60rem] rounded-3xl">
+    <video autoplay loop muted playsinline class="object-cover w-full h-auto min-w-[60rem]">
       <source src="${outside}" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -23,7 +23,7 @@ const Outside = () => {
           </h2>
         </div>
         <div
-          className="sm:h-[35rem] h-[25rem] overflow-hidden flex justify-center video"
+          className="sm:h-[35rem] h-[25rem] overflow-hidden flex justify-center rounded-3xl video"
           dangerouslySetInnerHTML={{ __html: videoHTML }}
         />
       </Link>
