@@ -7,11 +7,10 @@ import {
   Video,
   Highlight,
 } from "../../components/ProjectElements";
-import landscape from "../../assets/video/landscape vs T.webm";
 import landscapeBg from "../../assets/video/landscapeVs_bg.mp4";
-import Dataviz from "../../assets/video/Dataviz.webm";
+import Dataviz from "../../assets/video/DatavizB.mp4";
 import Motion from "../../assets/video/MotionDesign.mp4";
-import Rec from "../../assets/video/recLoop.webm";
+import Rec from "../../assets/video/recLoop_bg.mp4";
 import {
   Mockup,
   Sketches,
@@ -204,8 +203,8 @@ const OutsidePro = () => {
           />
 
           <Video
-            src={landscape}
-            videoStyle="object-cover md:w-[80%] h-auto min-w-[23rem]"
+            src={landscapeBg}
+            videoStyle="object-cover md:w-[80%] mix-blend-lighten h-auto min-w-[23rem]"
           />
 
           <Section
@@ -216,7 +215,7 @@ const OutsidePro = () => {
 
           <Video
             src={Dataviz}
-            videoStyle="object-cover lg:w-[60%] h-auto min-w-[23rem]"
+            videoStyle="object-cover mix-blend-lighten lg:w-[85%] h-auto min-w-[23rem]"
           />
 
           <Section text="I also settled on a motivation framework that rewards the user on a week-to-week basis. This ensures that the barrier for a fully grown home page is short enough for easy habit formation." />
@@ -231,7 +230,7 @@ const OutsidePro = () => {
 
           <Video
             src={Rec}
-            videoStyle="object-cover lg:w-[80%] h-auto min-w-[30rem]"
+            videoStyle="object-cover mix-blend-lighten lg:w-[80%] h-auto min-w-[30rem]"
           />
 
           <Section text="On top of this, the ability to review a park was included to help feed the recommendation system and improve the user's overall experience." />
