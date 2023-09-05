@@ -13,7 +13,7 @@ const Mitre = () => {
             mCODE Coverage Checker
           </h1>
           <h2 className="md:text-base text-sm font-bold font-body opacity-50 pt-2">
-            An open-source healthcare dashboard with in-depth and flexible data.
+            An open-source healthcare dashboard with in-depth and flexible data
             visualizations.
           </h2>
         </div>
