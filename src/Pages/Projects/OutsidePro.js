@@ -31,8 +31,14 @@ const OutsidePro = () => {
             <h2 className=" text-lg font-body font-bold text-Rose">
               UX Design
             </h2>
-            <p className="md:text-6xl text-5xl font-bold font-display">
+            <h1 className="md:text-6xl text-5xl font-bold font-display">
               Outside
+            </h1>
+            <p className="pt-2 font-body">
+              A motivational app that encourages people to get out of the house
+              by utilizing data visualizations, recommendations, and an adaptive
+              visual design that becomes more beautiful as the user meets their
+              goals.
             </p>
             <div>
               <div className="flex sm:flex-row flex-col justify-between gap-x-4 my-12">
@@ -71,28 +77,6 @@ const OutsidePro = () => {
             boxH="sm:h-56 h-64 opacity-75"
             text="“A detailed, cute, and fun app filled with aesthetic delight and visually compelling information. 👍”"
             quote="- Dr. Jason Alexander"
-          />
-
-          <Section
-            title="Overview"
-            callout="Introduction"
-            text={
-              <>
-                This was for the final project of INST 702 Visual design. The
-                class's premise was centered around utilizing visual design to
-                inform and ultimately enhance not only the feel of your products
-                but their usability as well. We were given free rein for this
-                project as long as we adhered to this core premise and met some
-                size requirements. <br /> <br />
-                As a response to this, I came up with Outside{" "}
-                <strong>
-                  a motivational app that encourages people to get out of the
-                  house by utilizing data visualizations, recommendations, and
-                  an adaptive visual design that becomes more beautiful as the
-                  user meets their goals.
-                </strong>{" "}
-              </>
-            }
           />
 
           <Section

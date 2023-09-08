@@ -157,7 +157,7 @@ ul {
 }
 
 .face-anim { 
-  animation: about .75s ease .7s backwards
+  animation: about .75s ease .65s backwards
 }
 .my-toast .Toastify__toast {
   border-radius: 50px;
