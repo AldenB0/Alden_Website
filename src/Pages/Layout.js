@@ -3,6 +3,8 @@ import { Outlet, Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "../index.css";
 import { Menu } from "../assets";
+import logo from "../assets/logo.png";
+import logoBw from "../assets/logo b&w.png";
 import styles from "../style";
 
 const Layout = () => {
@@ -16,7 +18,7 @@ const Layout = () => {
         >
           <div className={`text-white font-display text-3xl font-bold`}>
             <HashLink smooth to="/#home">
-              Alden Brown.
+              <img src={logo} alt="Logo" className="h-11" />
             </HashLink>
           </div>
           <ul className="list-none sm:flex hidden justify-end items-center flex-1 ">
