@@ -1,11 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.6843d80a.css",
-    "main.js": "/static/js/main.d76695d8.js",
+    "main.js": "/static/js/main.adb55aea.js",
     "static/media/RePictureP.mp4": "/static/media/RePictureP.0560bd24681b0fccb8e9.mp4",
     "static/media/mCodeVid.mp4": "/static/media/mCodeVid.5bf7d782d1dfbb726c34.mp4",
     "static/media/OutsideShowcase.mp4": "/static/media/OutsideShowcase.efe20d2f689908978104.mp4",
-    "static/media/project page change.png": "/static/media/project page change.22e414b03e0f40acea9a.png",
     "static/media/Final design.png": "/static/media/Final design.58312487b891325786b9.png",
     "static/media/landscapeVs_bg.mp4": "/static/media/landscapeVs_bg.243b91275bc5c57f9839.mp4",
     "static/media/recLoop_bg.mp4": "/static/media/recLoop_bg.b9c590b3a003130c9b1b.mp4",
@@ -15,15 +14,16 @@
     "static/media/inspiration.png": "/static/media/inspiration.ed29811a89c8577622b6.png",
     "static/media/HomepageEvo.png": "/static/media/HomepageEvo.2b02f502fa1a3e8c6255.png",
     "static/media/Heuristic eval blue.png": "/static/media/Heuristic eval blue.b23ec715ec433e2b2df9.png",
-    "static/media/profile page change.png": "/static/media/profile page change.d12e68bf315066222d51.png",
+    "static/media/profile page change.png": "/static/media/profile page change.b1f05418b3463620f38e.png",
     "static/media/mcodeShowcase.png": "/static/media/mcodeShowcase.20af71f539928103b119.png",
     "static/media/MotionDesign.mp4": "/static/media/MotionDesign.2413f4b36f482dce1116.mp4",
     "static/media/headshotc.jpg": "/static/media/headshotc.35dc2feb66d973d362be.jpg",
     "static/media/blur Affinity Diagram.png": "/static/media/blur Affinity Diagram.67ccd454b1d4b07f9746.png",
+    "static/media/project page change.png": "/static/media/project page change.88ba63f65dbfc35e36db.png",
     "static/media/DatavizB.mp4": "/static/media/DatavizB.bdc7bc44994ecfb67424.mp4",
     "static/media/Refinement.png": "/static/media/Refinement.ee1cc14a0bb836e451d3.png",
+    "static/media/user input screens.png": "/static/media/user input screens.2cc4b0c07792e485d515.png",
     "static/media/user flows.png": "/static/media/user flows.69b50c9615b9ad0665d2.png",
-    "static/media/user input screens.png": "/static/media/user input screens.abd520977a3544c16421.png",
     "static/media/Wireframes.png": "/static/media/Wireframes.40c4433c666e1678d5d3.png",
     "static/media/User J stacked.png": "/static/media/User J stacked.0d8908a597b3db34f150.png",
     "static/media/style guide.png": "/static/media/style guide.ab7d0d03dcb293183dab.png",
@@ -44,10 +44,10 @@
     "static/media/font.png": "/static/media/font.99a2e5772aee3d337ead.png",
     "index.html": "/index.html",
     "main.6843d80a.css.map": "/static/css/main.6843d80a.css.map",
-    "main.d76695d8.js.map": "/static/js/main.d76695d8.js.map"
+    "main.adb55aea.js.map": "/static/js/main.adb55aea.js.map"
   },
   "entrypoints": [
     "static/css/main.6843d80a.css",
-    "static/js/main.d76695d8.js"
+    "static/js/main.adb55aea.js"
   ]
 }
