@@ -19,7 +19,7 @@ class Logo extends React.Component {
             state: "autoplay",
             frames: [1, 329],
             transition: "onComplete",
-            delay: [1200],
+            delay: [1250],
           },
           {
             state: "loop",
