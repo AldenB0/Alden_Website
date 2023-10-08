@@ -2,9 +2,7 @@ import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "../index.css";
-import { Menu } from "../assets";
-import logo from "../assets/logo.png";
-import logoBw from "../assets/logo b&w.png";
+import { Menu, Logo } from "../assets";
 import styles from "../style";
 
 const Layout = () => {
@@ -14,11 +12,11 @@ const Layout = () => {
     <body id="home" className="bg-Background">
       <>
         <nav
-          className={`flex ${styles.paddingX} py-5 justify-between items-center navbar text-lg sticky top-0 w-full z-50 bg-Background `}
+          className={`flex ${styles.paddingX} py-5 justify-between items-center navbar text-lg sticky top-0 w-full z-50 max-h-24 bg-Background `}
         >
-          <div className={`text-white font-display text-3xl font-bold`}>
+          <div className={"relative -left-16 h-[5.5rem]"}>
             <HashLink smooth to="/#home">
-              <img src={logo} alt="Logo" className="h-11" />
+              <Logo />
             </HashLink>
           </div>
           <ul className="list-none sm:flex hidden justify-end items-center flex-1 ">
