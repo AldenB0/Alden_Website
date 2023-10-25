@@ -169,7 +169,8 @@ const Coverage = () => {
                 Because of the information-gathering interviews I was able to
                 identify that our specific user for this tool would be
                 <strong> Clinical Informaticists </strong>
-                or for smaller hospitals the clinician working on the
+                or for smaller hospitals the clinician working on the mCODE
+                transition team.
               </>
             }
           />
@@ -247,7 +248,7 @@ const Coverage = () => {
           <Section
             title="Design"
             callout="Hand-Off"
-            text="Now that the design is in a semi-finalized state the development process was ready to begin so in order to catch everyone up to speed and make the transition as simple as possible a style guide was created that outlined simple things like font, color icons, and more complex topics such how the spacing should work and how the page behaves during resizing."
+            text="Now that the design is in a semi-finalized state the development process was ready to begin so in order to catch everyone up to speed and make the transition as simple as possible a style guide was created that outlined simple things like font, color, icons, and more complex topics such as the padding between elements and how the page behaves during resizing."
           />
 
           <Img imgSrc={StyleGuide} />
@@ -300,7 +301,7 @@ const Coverage = () => {
                 </span>
               </>
             }
-            text="Here we added the ability for people to input the server keys through request headers and the ability to query specific patients."
+            text="Here, we added the ability for users to input server keys through request headers and query specific patients."
           />
 
           <Img imgSrc={AdvOptions} />
@@ -370,7 +371,7 @@ Section:
   text,
 
 Img:
-  imagSrc,
+  imgSrc,
   altText,
   imgStyle,
 

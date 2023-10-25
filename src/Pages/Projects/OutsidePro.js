@@ -87,13 +87,10 @@ const OutsidePro = () => {
 
           <Section
             title="Overview"
-            callout="Inspiration"
-            text="For this project, I challenged myself to not only create a product that considers users' needs and addresses a real-world problem but also push myself to incorporate my knowledge of motion design to enrich both the aesthetic and functional dimensions of the product. Through this, I hoped to create something that was not just a joy to look at but had aesthetics that supported the product's usability and helped to boost user motivation."
-          />
-
-          <Section
             callout={
               <>
+                {" "}
+                Inspiration <br></br> <br></br>
                 <span className="md:text-2xl text-xl font-normal">
                   Concept:
                 </span>
@@ -141,7 +138,7 @@ const OutsidePro = () => {
                 </span>
               </>
             }
-            text="The color palette selection was guided by two primary considerations: capturing the essence of the outdoors and cultivating a calming ambiance. The aim was to avoid the stereotypical enthusiasm associated with outdoor enthusiasts, given the app's focus on motivating those less inclined to go outside. By choosing primary colors reminiscent of nature and pairing them with soothing neutrals and highlights, a harmonious balance was achieved. This palette not only evokes the outdoor experience but also ensures a serene user interface."
+            text="The color palette selection was guided by two primary considerations: capturing the essence of the outdoors and cultivating a calming ambiance. The aim was to avoid the stereotypical style associated with outdoor enthusiasts, given the app's focus on motivating those less inclined to go outside. By choosing primary colors reminiscent of nature and pairing them with soothing neutrals and highlights, a harmonious balance was achieved. This palette not only evokes the outdoor experience but also ensures a serene user interface."
           />
 
           <Img imgSrc={Color} />
