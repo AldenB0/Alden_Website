@@ -1,5 +1,5 @@
 import React from "react";
-import mcodeShowcase from "../assets/img/mcodeShowcase.png";
+import mcodeShowcase from "../assets/img/mcodeShowcase.jpg";
 
 import { Link } from "react-router-dom";
 
@@ -18,7 +18,7 @@ const Mitre = () => {
           </h2>
         </div>
 
-        <div className="sm:h-[35rem] h-[25rem] rounded-3xl overflow-hidden flex justify-center video">
+        <div className="sm:h-[30rem] h-[25rem] rounded-3xl overflow-hidden flex justify-center video">
           <img
             src={mcodeShowcase}
             alt="mCODE Coverage Checker"

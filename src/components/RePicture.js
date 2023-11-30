@@ -16,7 +16,7 @@ const RePicture = () => {
           </h2>
         </div>
 
-        <div className="sm:h-[35rem] h-[25rem] rounded-3xl overflow-hidden flex justify-center video">
+        <div className="sm:h-[30rem] h-[25rem] rounded-3xl overflow-hidden flex justify-center video">
           <img
             src={RePic}
             alt="Repicture Screens"

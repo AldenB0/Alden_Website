@@ -2,14 +2,14 @@ import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "../index.css";
-import { Menu, Logo } from "../assets";
+import { Menu } from "../assets";
 import styles from "../style";
 
 const Layout = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <body id="home" className="bg-Background">
+    <body id="home" className="bg-Background max-w-[1920px] mx-auto">
       <>
         <nav
           className={`flex ${styles.paddingX} py-5 justify-between items-center navbar text-lg sticky top-0 w-full z-50 max-h-[5.4rem] bg-Background `}

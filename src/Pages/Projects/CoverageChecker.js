@@ -35,7 +35,7 @@ const useCases = [
 
 const Coverage = () => {
   return (
-    <div className="bg-Background overflow-x-hidden">
+    <div className="bg-Background overflow-x-hidden ">
       <div className={`${styles.flexStart}`}>
         <div className="md:max-w-[70%] max-w-[90%] w-full">
           <div className="flex flex-col justify-center text-white pt-20">

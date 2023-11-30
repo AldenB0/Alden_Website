@@ -3,6 +3,7 @@ import "../index.css";
 import styles from "../style";
 import { Face } from "../assets/";
 import { Arrow } from "../assets/";
+import { HashLink } from "react-router-hash-link";
 
 const Hero = () => (
   <section className="h-screen">
@@ -33,7 +34,9 @@ const Hero = () => (
 
     <div className="flex justify-center items-center w-full">
       <div className="absolute bottom-0 arrowFloat">
-        <Arrow />
+        <HashLink smooth to="/#mitre">
+          <Arrow />
+        </HashLink>
       </div>
     </div>
   </section>

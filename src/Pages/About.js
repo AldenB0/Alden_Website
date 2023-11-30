@@ -5,7 +5,7 @@ import headshot from "../assets/img/headshotc.jpg";
 
 const About = () => {
   return (
-    <div id="About" className="bg-Background">
+    <div id="About" className="bg-Background max-w-[1920px]">
       <div className={`${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           <div className="flex flex-wrap justify-center pt-28 pb-10">
