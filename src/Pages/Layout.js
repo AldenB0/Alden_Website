@@ -40,11 +40,11 @@ const Layout = () => {
               <Menu />
             </div>
             <div
-              className={`${
-                toggle ? "flex" : "hidden"
-              } p-6  bg-black-gradient absolute top-16 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+              className={`transition-all duration-300 ease-in-out ${
+                toggle ? "flex" : "opacity-0 scale-95"
+              } p-6 backdrop-blur-md backdrop-brightness-[.7] absolute top-16 right-0 mx-4 my-2 min-w-[140px] rounded-xl`}
             >
-              <ul className="list-none flex flex-col justify-end items-center flex-1">
+              <ul className="list-none flex flex-col justify-end">
                 <li className="font-body font-semibold text-white cursor-pointer mb-4">
                   <HashLink smooth to="/#mitre">
                     Work
