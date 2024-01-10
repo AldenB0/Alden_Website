@@ -8,19 +8,19 @@ const About = () => {
     <div id="About" className="bg-Background max-w-[1920px]">
       <div className={`${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <div className="flex flex-wrap justify-center pt-28 pb-10">
-            <div className="w-full sm:w-1/2 p-10 text-white">
-              <h1 className="text-4xl font-bold font-display ">
+          <div className="flex flex-col lg:flex-row items-center pt-28 pb-10">
+            <div className="w-full lg:w-1/2 p-10 text-white">
+              <h1 className="lg:text-4xl text-3xl font-bold font-display ">
                 A Quick Introduction.
               </h1>
-              <p className="font-body font-bold text-lg py-4">
+              <p className="font-body font-bold lg:text-lg text:md py-4">
                 I'm a recent graduate from UMD's Human-Computer Interaction
                 masters program and have spent the past year working at MITRE as
                 a User Experience Engineer. There I was involved in all aspects
                 of the product design pipeline doing research, design, and
                 front-end development for various projects.
               </p>
-              <p className="font-body text-sm py-2">
+              <p className="font-body Lgtext-sm py-2">
                 Before this, I completed my Bachelor's in psychology with a
                 focus on cognitive science at Texas A&M University. While here,
                 I worked at A&M's Telebehavioral Care clinic, where free remote
@@ -51,7 +51,7 @@ const About = () => {
             <div className="w-full sm:w-1/2">
               <div className="mx-auto max-w-md ">
                 <img
-                  className="max-w-md h-auto rounded-3xl"
+                  className="w-full md:h-auto h-[25rem] rounded-3xl md:max-w-md mb-4 md:mb-0 object-cover"
                   src={headshot}
                   alt="Headshot"
                 />
