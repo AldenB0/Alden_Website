@@ -4,6 +4,7 @@ import { HashLink } from "react-router-hash-link";
 import "../index.css";
 import { Menu } from "../assets";
 import styles from "../style";
+import logo from "../assets/img/overlap test 1.png";
 
 const Layout = () => {
   const [toggle, setToggle] = useState(false);
@@ -14,11 +15,17 @@ const Layout = () => {
         <nav
           className={`flex ${styles.paddingX} py-5 justify-between items-center navbar text-lg sticky top-0 w-full z-50 max-h-[5.4rem] bg-Background `}
         >
-          <div className={`text-white font-display text-3xl font-bold`}>
-            <HashLink smooth to="/#home">
-              Alden Brown.
+          <div className="flex items-center text-white font-display text-3xl font-bold">
+            <HashLink smooth to="/#home" className="flex items-center">
+              <img
+                src={logo}
+                alt="mCODE Coverage Checker"
+                className="w-10 h-auto hidden"
+              />
+              <h1 className="mr-2">Alden Brown.</h1>
             </HashLink>
           </div>
+
           <ul className="list-none sm:flex hidden justify-end items-center flex-1 ">
             <li className="font-body font-semibold text-white cursor-pointer mr-10 top-2 nav_anim">
               <HashLink smooth to="/#mitre">

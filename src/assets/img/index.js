@@ -22,6 +22,7 @@ import StyleGuide from "./style guide.png";
 import mcodeQuotes from "./mCODE quotes.png";
 import Settings from "./settings.png";
 import AdvOptions from "./Advanced options.png";
+import logo from "./overlap test 1.png";
 /* REMEMBER TO USE FOR EXPORTING FILES */
 
 export {
@@ -49,4 +50,5 @@ export {
   mcodeQuotes,
   Settings,
   AdvOptions,
+  logo,
 };

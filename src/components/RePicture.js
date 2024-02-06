@@ -7,7 +7,9 @@ const RePicture = () => {
     <div id="mitre" className="w-5/6 sm:py-16 py-10">
       <Link to="/RePicture_CaseStudy">
         <div className="text-white py-3">
-          <h3 className="text-Green font-display text-lg">RePicture</h3>
+          <h3 className="text-white opacity-70 italic font-body text-md">
+            RePicture
+          </h3>
           <h1 className="md:text-4xl text-3xl font-bold font-display">
             RePicture
           </h1>

@@ -8,9 +8,9 @@ const Home = () => (
       <div className={`${styles.boxWidth} `}>
         <Hero />
         <div className="flex flex-col justify-center items-center">
-          <RePicture />
           <Mitre />
           <Outside />
+          <RePicture />
           <VFC />
           <Footer />
         </div>

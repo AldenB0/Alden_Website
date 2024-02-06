@@ -16,8 +16,8 @@ const Hero = () => (
             <span className="inline-block hero-text1">Hello,</span>{" "}
             <span className="inline-block hero-text2">I'm</span>{" "}
             <span className="inline-block hero-text3">Alden.</span> <br />
-            <span className="inline-block hero-text4">An</span>{" "}
-            <span className="inline-block hero-text5">experience</span>{" "}
+            <span className="inline-block hero-text4">A</span>{" "}
+            <span className="inline-block hero-text5">product</span>{" "}
             <span className="inline-block hero-text6">designer.</span>
           </p>
           <p className="leading-normal font-display text-white text-[12px] py-3 hero-text7 xl:text-[20px] lg:text-[16px] sm:text-[14px]">
