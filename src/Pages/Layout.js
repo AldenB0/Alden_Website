@@ -25,7 +25,6 @@ const Layout = () => {
               <h1 className="mr-2">Alden Brown.</h1>
             </HashLink>
           </div>
-
           <ul className="list-none sm:flex hidden justify-end items-center flex-1 ">
             <li className="font-body font-semibold text-white cursor-pointer mr-10 top-2 nav_anim">
               <HashLink smooth to="/#mitre">
@@ -53,21 +52,31 @@ const Layout = () => {
             >
               <ul className="list-none flex flex-col justify-end">
                 <li className="font-body font-semibold text-white cursor-pointer mb-4">
-                  <HashLink smooth to="/#mitre">
+                  <HashLink
+                    smooth
+                    to="/#mitre"
+                    onClick={() => setToggle(false)}
+                  >
                     Work
                   </HashLink>
                 </li>
                 <li className="font-body font-semibold text-white cursor-pointer mb-4">
-                  <Link to="/About">About</Link>
+                  <Link to="/About" onClick={() => setToggle(false)}>
+                    About
+                  </Link>
                 </li>
                 <li className="font-body font-semibold text-white cursor-pointer">
-                  <HashLink smooth to="/#footer">
+                  <HashLink
+                    smooth
+                    to="/#footer"
+                    onClick={() => setToggle(false)}
+                  >
                     Contact
                   </HashLink>
                 </li>
               </ul>
             </div>
-          </div>
+          </div>{" "}
         </nav>
 
         <Outlet />
