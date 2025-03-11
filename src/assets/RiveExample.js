@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useRive, useStateMachineInput } from "rive-react";
-import riveAnimation from "./animations/hamburger_time.riv";
+import riveExample from "./animations/hamburger_time.riv";
 
 /**
  * RiveTest Component
@@ -13,7 +13,7 @@ import riveAnimation from "./animations/hamburger_time.riv";
 
 const RiveTest = () => {
   const { RiveComponent, rive } = useRive({
-    src: riveAnimation,
+    src: riveExample,
     stateMachines: "Basic State Machine",
     autoplay: true,
   });
