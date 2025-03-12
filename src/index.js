@@ -12,6 +12,18 @@ import RePicturePro from "./Pages/Projects/RePicturePro";
 import VFCPro from "./Pages/Projects/VFCProg";
 import OutsidePro from "./Pages/Projects/OutsidePro";
 
+console.log(
+  `%c ____________
+  < v1.0.1 >
+ ------------
+        \\   ^__^
+         \\  (oo)\\_______
+            (__)\\       )\\/\\
+                ||----w |
+                ||     ||`,
+  "font-family:monospace"
+);
+
 export default function App() {
   return (
     <Router basename="/">
