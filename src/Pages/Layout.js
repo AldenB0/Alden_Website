@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "../index.css";
-import { Menu } from "../assets";
+import { RiveNav } from "../assets";
 import styles from "../style";
 import logo from "../assets/img/overlap test 1.png";
 
@@ -42,8 +42,8 @@ const Layout = () => {
           </ul>
           {/* mobile navbar */}
           <div className="sm:hidden flex overflow-hidden">
-            <div onClick={() => setToggle((prev) => !prev)}>
-              <Menu />
+            <div className="w-8 h-8" onClick={() => setToggle((prev) => !prev)}>
+              <RiveNav />
             </div>
             <div
               className={`transition-all duration-300 ease-in-out ${

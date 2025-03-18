@@ -5,6 +5,7 @@ import Logo from "./Logo";
 import RiveTest from "./RiveExample";
 import RiveStar from "./RiveStar";
 import RiveButton from "./RiveButton";
+import RiveNav from "./RiveNav";
 /* REMEMBER TO USE FOR EXPORTING FILES */
 
-export { Face, Menu, Arrow, Logo, RiveTest, RiveStar, RiveButton };
+export { Face, Menu, Arrow, Logo, RiveTest, RiveStar, RiveButton, RiveNav };
