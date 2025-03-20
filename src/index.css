@@ -95,6 +95,21 @@ ul {
 .fade-in-rev {
   animation: about-reverse 0.3s ease-in-out forwards;
 }
+
+@keyframes menu-fade-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px); /* Reduced distance for faster visual effect */
+  }
+}
+
+.menu-fade-out {
+  animation: menu-fade-out 0.2s ease-in-out forwards;
+}
 /* bounce in keyframes end*/
 
 /* Nav bar hover code*/

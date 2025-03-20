@@ -5,6 +5,7 @@ import { RiveNav } from "../assets";
 
 const Test = () => {
   const [toggle, setToggle] = useState(false);
+  const [clickedItem, setClickedItem] = useState(null);
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
 
@@ -28,12 +29,18 @@ const Test = () => {
     };
   }, [toggle]);
 
-  const handleMenuItemClick = () => {
-    setToggle(false);
+  const handleMenuItemClick = (item) => {
+    setClickedItem(item);
+
+    // Reset after animation completes
+    setTimeout(() => {
+      setClickedItem(null);
+      setToggle(false);
+    }, 300);
   };
 
   return (
-    <div className="bg-Background max-w-[1920px] min-h-screen p-4">
+    <div className="bg-Background max-w-[1920px] min-h-screen p-16">
       <div className="flex flex-col items-center mb-8">
         <div className="text-white mb-2">
           Menu State: {toggle ? "Open" : "Closed"}
@@ -52,18 +59,39 @@ const Test = () => {
       <div
         ref={menuRef}
         className={`transition-all duration-300 ease-in-out ${
-          toggle ? "flex" : "opacity-0 scale-95 pointer-events-none"
-        } p-6 bg-gray-800 max-w-[200px] mx-auto rounded-xl`}
+          toggle ? "flex fade-in" : "opacity-0 pointer-events-none fade-in-rev"
+        } backdrop-blur-md backdrop-brightness-[.7] rounded-xl w-full`}
       >
-        <ul className="list-none flex flex-col w-full">
-          <li className="text-white cursor-pointer mb-4 p-2 hover:bg-gray-700 rounded">
-            <button onClick={handleMenuItemClick}>Menu Item 1</button>
+        <ul className="list-none flex flex-col w-full py-8 space-y-6 items-center ml-0">
+          <li className="font-body font-semibold text-white text-xl cursor-pointer">
+            <button
+              className={`transition-all duration-300 ${
+                clickedItem === "work" ? "opacity-50 scale-95" : ""
+              }`}
+              onClick={() => handleMenuItemClick("work")}
+            >
+              Work
+            </button>
           </li>
-          <li className="text-white cursor-pointer mb-4 p-2 hover:bg-gray-700 rounded">
-            <button onClick={handleMenuItemClick}>Menu Item 2</button>
+          <li className="font-body font-semibold text-white text-xl cursor-pointer">
+            <button
+              className={`transition-all duration-300 ${
+                clickedItem === "about" ? "opacity-50 scale-95" : ""
+              }`}
+              onClick={() => handleMenuItemClick("about")}
+            >
+              About
+            </button>
           </li>
-          <li className="text-white cursor-pointer p-2 hover:bg-gray-700 rounded">
-            <button onClick={handleMenuItemClick}>Menu Item 3</button>
+          <li className="font-body font-semibold text-white text-xl cursor-pointer">
+            <button
+              className={`transition-all duration-300 ${
+                clickedItem === "contact" ? "opacity-50 scale-95" : ""
+              }`}
+              onClick={() => handleMenuItemClick("contact")}
+            >
+              Contact
+            </button>
           </li>
         </ul>
       </div>

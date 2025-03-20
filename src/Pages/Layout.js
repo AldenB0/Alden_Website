@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "../index.css";
@@ -8,6 +8,47 @@ import logo from "../assets/img/overlap test 1.png";
 
 const Layout = () => {
   const [toggle, setToggle] = useState(false);
+  const [clickedItem, setClickedItem] = useState(null);
+  const [hasOpened, setHasOpened] = useState(false); // Track if menu has been opened
+  const menuRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  // Handle clicks outside the menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        toggle &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setToggle(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [toggle]);
+
+  // Update hasOpened when toggle changes
+  useEffect(() => {
+    if (toggle) {
+      setHasOpened(true);
+    }
+  }, [toggle]);
+
+  const handleMenuItemClick = (item) => {
+    setClickedItem(item);
+
+    // Reset after animation completes
+    setTimeout(() => {
+      setClickedItem(null);
+      setToggle(false);
+    }, 300);
+  };
 
   return (
     <body id="home" className="bg-Background max-w-[1920px] mx-auto">
@@ -40,45 +81,69 @@ const Layout = () => {
               </HashLink>
             </li>
           </ul>
+
           {/* mobile navbar */}
           <div className="sm:hidden flex overflow-hidden">
-            <div className="w-8 h-8" onClick={() => setToggle((prev) => !prev)}>
-              <RiveNav />
-            </div>
             <div
-              className={`transition-all duration-300 ease-in-out ${
-                toggle ? "flex" : "opacity-0 scale-95"
-              } p-6 backdrop-blur-md backdrop-brightness-[.7] absolute top-16 right-0 mx-4 my-2 min-w-[140px] rounded-xl`}
+              ref={buttonRef}
+              className="w-8 h-8"
+              onClick={() => setToggle((prev) => !prev)}
             >
-              <ul className="list-none flex flex-col justify-end">
-                <li className="font-body font-semibold text-white cursor-pointer mb-4">
+              <RiveNav isOpen={toggle} />
+            </div>
+
+            {/* mobile menu */}
+            <div
+              ref={menuRef}
+              className={`transition-all duration-300 ease-in-out ${
+                toggle
+                  ? "flex fade-in"
+                  : hasOpened
+                  ? "opacity-0 pointer-events-none fade-in-rev"
+                  : "opacity-0 pointer-events-none"
+              } backdrop-blur-md backdrop-brightness-[.7] absolute top-16 right-0 left-0 mx-4 my-2 rounded-xl`}
+              style={!toggle && hasOpened ? { animationDuration: "0.15s" } : {}}
+            >
+              <ul className="list-none flex flex-col w-full py-8 space-y-6 items-center ml-0">
+                <li className="font-body font-semibold text-white text-xl cursor-pointer">
                   <HashLink
                     smooth
                     to="/#mitre"
-                    onClick={() => setToggle(false)}
+                    className={`transition-all duration-300 ${
+                      clickedItem === "work" ? "opacity-50 scale-95" : ""
+                    }`}
+                    onClick={() => handleMenuItemClick("work")}
                   >
                     Work
                   </HashLink>
                 </li>
-                <li className="font-body font-semibold text-white cursor-pointer mb-4">
-                  <Link to="/About" onClick={() => setToggle(false)}>
+                <li className="font-body font-semibold text-white text-xl cursor-pointer">
+                  <Link
+                    to="/About"
+                    className={`transition-all duration-300 ${
+                      clickedItem === "about" ? "opacity-50 scale-95" : ""
+                    }`}
+                    onClick={() => handleMenuItemClick("about")}
+                  >
                     About
                   </Link>
                 </li>
-                <li className="font-body font-semibold text-white cursor-pointer">
+                <li className="font-body font-semibold text-white text-xl cursor-pointer">
                   <HashLink
                     smooth
                     to="/#footer"
-                    onClick={() => setToggle(false)}
+                    className={`transition-all duration-300 ${
+                      clickedItem === "contact" ? "opacity-50 scale-95" : ""
+                    }`}
+                    onClick={() => handleMenuItemClick("contact")}
                   >
                     Contact
                   </HashLink>
                 </li>
               </ul>
             </div>
-          </div>{" "}
+          </div>
         </nav>
-
         <Outlet />
       </>
     </body>
