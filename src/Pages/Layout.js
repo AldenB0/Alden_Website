@@ -78,8 +78,12 @@ const Layout = () => {
           <div className="sm:hidden flex overflow-hidden">
             <div
               ref={buttonRef}
-              className="w-8 h-8"
+              className="w-8 h-8 cursor-pointer"
               onClick={() => setToggle((prev) => !prev)}
+              onTouchStart={(e) => {
+                e.preventDefault(); // Prevent default touch behavior
+                setToggle((prev) => !prev);
+              }}
             >
               <RiveNav isOpen={toggle} />
             </div>
