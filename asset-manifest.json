@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.64157201.css",
-    "main.js": "/static/js/main.b910301a.js",
+    "main.css": "/static/css/main.85c85d7a.css",
+    "main.js": "/static/js/main.e6cf03fe.js",
     "static/media/RePictureP.mp4": "/static/media/RePictureP.0560bd24681b0fccb8e9.mp4",
     "static/media/mCodeVid.mp4": "/static/media/mCodeVid.5bf7d782d1dfbb726c34.mp4",
     "static/media/OutsideShowcase.mp4": "/static/media/OutsideShowcase.efe20d2f689908978104.mp4",
@@ -42,12 +42,16 @@
     "static/media/color.png": "/static/media/color.cdde2e6730c5f0465f8a.png",
     "static/media/usability stats.png": "/static/media/usability stats.1af2bc9009957ecd311c.png",
     "static/media/font.png": "/static/media/font.99a2e5772aee3d337ead.png",
+    "static/media/star_rating.riv": "/static/media/star_rating.a7e625e5270b226b3321.riv",
+    "static/media/Button.riv": "/static/media/Button.b9a576561f1028668839.riv",
     "index.html": "/index.html",
-    "main.64157201.css.map": "/static/css/main.64157201.css.map",
-    "main.b910301a.js.map": "/static/js/main.b910301a.js.map"
+    "static/media/ham_nav.riv": "/static/media/ham_nav.b54fec2a378b08d5471e.riv",
+    "static/media/hamburger_time.riv": "/static/media/hamburger_time.27715acc6c13238a6fea.riv",
+    "main.85c85d7a.css.map": "/static/css/main.85c85d7a.css.map",
+    "main.e6cf03fe.js.map": "/static/js/main.e6cf03fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.64157201.css",
-    "static/js/main.b910301a.js"
+    "static/css/main.85c85d7a.css",
+    "static/js/main.e6cf03fe.js"
   ]
 }
