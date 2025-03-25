@@ -15,7 +15,7 @@ import Test from "./Pages/Test";
 
 console.log(
   `%c ____________
-  < v1.0.1 >
+  < v1.0.2 >
  ------------
         \\   ^__^
          \\  (oo)\\_______
@@ -31,7 +31,13 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="test" element={<Test />} />
+
+          {/* Test page Feel free to bring back whenever needed
+
+          <Route path="test" element={<Test />} /> 
+
+          */}
+
           <Route
             path="About"
             element={

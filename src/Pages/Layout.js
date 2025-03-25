@@ -9,7 +9,6 @@ import logo from "../assets/img/overlap test 1.png";
 const Layout = () => {
   const [toggle, setToggle] = useState(false);
   const [clickedItem, setClickedItem] = useState(null);
-  const [hasOpened, setHasOpened] = useState(false); // Track if menu has been opened
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
 
@@ -31,13 +30,6 @@ const Layout = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [toggle]);
-
-  // Update hasOpened when toggle changes
-  useEffect(() => {
-    if (toggle) {
-      setHasOpened(true);
-    }
   }, [toggle]);
 
   const handleMenuItemClick = (item) => {
@@ -91,18 +83,17 @@ const Layout = () => {
             >
               <RiveNav isOpen={toggle} />
             </div>
-
-            {/* mobile menu */}
+            {/* Mobile menu with bounce transition */}
             <div
               ref={menuRef}
-              className={`transition-all duration-300 ease-in-out ${
+              className={`transform transition-all duration-300 ${
                 toggle
-                  ? "flex fade-in"
-                  : hasOpened
-                  ? "opacity-0 pointer-events-none fade-in-rev"
-                  : "opacity-0 pointer-events-none"
+                  ? "flex opacity-100 translate-y-0"
+                  : "opacity-0 -translate-y-4 pointer-events-none"
               } backdrop-blur-md backdrop-brightness-[.7] absolute top-16 right-0 left-0 mx-4 my-2 rounded-xl`}
-              style={!toggle && hasOpened ? { animationDuration: "0.15s" } : {}}
+              style={{
+                transitionTimingFunction: "cubic-bezier(0.34, 1.56, 0.64, 1)",
+              }}
             >
               <ul className="list-none flex flex-col w-full py-8 space-y-6 items-center ml-0">
                 <li className="font-body font-semibold text-white text-xl cursor-pointer">
@@ -144,6 +135,7 @@ const Layout = () => {
             </div>
           </div>
         </nav>
+
         <Outlet />
       </>
     </body>

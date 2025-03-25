@@ -12,18 +12,16 @@ const Hero = () => (
     >
       <div className={`flex-col xl:px-0 lg:px-16 px-6`}>
         <div className="flex flex-col w-full">
-          <p className="leading-normal font-display font-bold text-2xl text-white xl:text-5xl lg:text-4xl md:text-3xl">
+          <p className="leading-normal font-display font-bold md:text-2xl text-3xl text-white xl:text-5xl lg:text-4xl">
             <span className="inline-block hero-text1">Hello,</span>{" "}
             <span className="inline-block hero-text2">I'm</span>{" "}
-            <span className="inline-block hero-text3">Alden.</span> <br />
+            <span className="inline-block hero-text3">Alden</span> <br />
             <span className="inline-block hero-text4">A</span>{" "}
-            <span className="inline-block hero-text5">product</span>{" "}
-            <span className="inline-block hero-text6">designer.</span>
+            <span className="inline-block hero-text5">UX</span>{" "}
+            <span className="inline-block hero-text6">Designer</span>
           </p>
-          <p className="leading-normal font-display text-white text-[12px] py-3 hero-text7 xl:text-[20px] lg:text-[16px] sm:text-[14px]">
-            <span>Recent HCI Masters Graduate with an eye for detail</span>{" "}
-            <br />
-            <span>and compelling design.</span>
+          <p className="leading-normal font-display text-[#D2D2D2] md:text-[12px] text-base py-3 hero-text7 xl:text-[20px] lg:text-[16px]">
+            <span>I design intuitive experiences that help people.</span> <br />
           </p>
         </div>
       </div>
@@ -41,5 +39,4 @@ const Hero = () => (
     </div>
   </section>
 );
-
 export default Hero;

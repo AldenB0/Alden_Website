@@ -40,7 +40,15 @@ function Footer() {
     <>
       <ToastContainer
         className="my-toast"
-        style={{ textAlign: "center", width: "250px", borderRadius: "50px" }}
+        style={{
+          textAlign: "center",
+          width: "250px",
+          borderRadius: "50px",
+          left: "50%", // Position from center of viewport horizontally
+          transform: "translateX(-50%)", // Offset by half its width
+          bottom: "20px", // Explicitly set bottom distance
+          position: "fixed", // Ensure fixed positioning
+        }}
         position="bottom-center"
         autoClose={2000}
         limit={3}
