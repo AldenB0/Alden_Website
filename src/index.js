@@ -9,9 +9,8 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Coverage from "./Pages/Projects/CoverageChecker";
 import RePicturePro from "./Pages/Projects/RePicturePro";
-import VFCPro from "./Pages/Projects/VFCProg";
 import OutsidePro from "./Pages/Projects/OutsidePro";
-import Test from "./Pages/Test";
+import Playground from "./Pages/Playground";
 
 console.log(
   `%c ____________
@@ -32,11 +31,10 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
 
-          {/* Test page Feel free to bring back whenever needed
-
-          <Route path="test" element={<Test />} /> 
-
-          */}
+          {/* Dev-only animation sandbox: localhost:3000/#/playground */}
+          {process.env.NODE_ENV === "development" && (
+            <Route path="playground" element={<Playground />} />
+          )}
 
           <Route
             path="About"
@@ -59,14 +57,6 @@ export default function App() {
             element={
               <ScrollToTop>
                 <RePicturePro />
-              </ScrollToTop>
-            }
-          />
-          <Route
-            path="VFC_CaseStudy"
-            element={
-              <ScrollToTop>
-                <VFCPro />
               </ScrollToTop>
             }
           />

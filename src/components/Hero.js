@@ -1,42 +1,57 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../index.css";
 import styles from "../style";
 import { Face } from "../assets/";
 import { Arrow } from "../assets/";
 import { HashLink } from "react-router-hash-link";
 
-const Hero = () => (
-  <section className="h-screen">
-    <div
-      className={`flex h-5/6 md:flex-row ${styles.flexCenter} flex-col ${styles.paddingY} `}
-    >
-      <div className={`flex-col xl:px-0 lg:px-16 px-6`}>
-        <div className="flex flex-col w-full">
-          <p className="leading-normal font-display font-bold md:text-2xl text-3xl text-white xl:text-5xl lg:text-4xl">
-            <span className="inline-block hero-text1">Hello,</span>{" "}
-            <span className="inline-block hero-text2">I'm</span>{" "}
-            <span className="inline-block hero-text3">Alden</span> <br />
-            <span className="inline-block hero-text4">A</span>{" "}
-            <span className="inline-block hero-text5">UX</span>{" "}
-            <span className="inline-block hero-text6">Designer</span>
-          </p>
-          <p className="leading-normal font-display text-[#D2D2D2] md:text-[12px] text-base py-3 hero-text7 xl:text-[20px] lg:text-[16px]">
-            <span>I design intuitive experiences that help people.</span> <br />
-          </p>
+const Hero = () => {
+  // The intro animation starts when the Face Lottie has loaded (so text and
+  // face come in together) instead of relying on fixed delays tuned to page
+  // load speed. The timeout is a fallback in case the Lottie CDN is slow.
+  const [ready, setReady] = useState(false);
+  const fallbackTimer = useRef(null);
+
+  useEffect(() => {
+    fallbackTimer.current = setTimeout(() => setReady(true), 2500);
+    return () => clearTimeout(fallbackTimer.current);
+  }, []);
+
+  return (
+    <section className={`h-screen ${ready ? "hero-ready" : ""}`}>
+      <div
+        className={`flex h-5/6 md:flex-row ${styles.flexCenter} flex-col ${styles.paddingY} `}
+      >
+        <div className={`flex-col xl:px-0 lg:px-16 px-6`}>
+          <div className="flex flex-col w-full">
+            <p className="leading-normal font-display font-bold md:text-2xl text-3xl text-white xl:text-5xl lg:text-4xl">
+              <span className="inline-block hero-text1">Hello,</span>{" "}
+              <span className="inline-block hero-text2">I'm</span>{" "}
+              <span className="inline-block hero-text3">Alden</span> <br />
+              <span className="inline-block hero-text4">A</span>{" "}
+              <span className="inline-block hero-text5">UX</span>{" "}
+              <span className="inline-block hero-text6">Designer</span>
+            </p>
+            <p className="leading-normal font-display text-TextMuted md:text-[12px] text-base py-3 hero-text7 xl:text-[20px] lg:text-[16px]">
+              <span>I design intuitive experiences that help people.</span>{" "}
+              <br />
+            </p>
+          </div>
+        </div>
+        <div className="face-anim relative lg:left-24 md:w-1/2 ">
+          <Face onReady={() => setReady(true)} />
         </div>
       </div>
-      <div className="face-anim relative lg:left-24 md:w-1/2 ">
-        <Face />
-      </div>
-    </div>
 
-    <div className="flex justify-center items-center w-full">
-      <div className="absolute bottom-0 arrowFloat">
-        <HashLink smooth to="/#mitre">
-          <Arrow />
-        </HashLink>
+      <div className="flex justify-center items-center w-full">
+        <div className="absolute bottom-0 arrowFloat">
+          <HashLink smooth to="/#work">
+            <Arrow />
+          </HashLink>
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
+
 export default Hero;

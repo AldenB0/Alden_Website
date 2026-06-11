@@ -13,14 +13,14 @@ const About = () => {
               <h1 className="lg:text-4xl text-3xl font-bold font-display ">
                 A Quick Introduction.
               </h1>
-              <p className="font-body font-bold lg:text-lg text:md py-4">
+              <p className="font-body font-bold lg:text-lg text-base py-4">
                 I'm a recent graduate from UMD's Human-Computer Interaction
                 masters program and have spent the past year working at MITRE as
                 a User Experience Engineer. There I was involved in all aspects
                 of the product design pipeline doing research, design, and
                 front-end development for various projects.
               </p>
-              <p className="font-body Lgtext-sm py-2">
+              <p className="font-body lg:text-sm py-2">
                 Before this, I completed my Bachelor's in psychology with a
                 focus on cognitive science at Texas A&M University. While here,
                 I worked at A&M's Telebehavioral Care clinic, where free remote

@@ -6,6 +6,7 @@ import {
   Img,
   Video,
   Highlight,
+  CaseStudyHeader,
 } from "../../components/ProjectElements";
 import landscapeBg from "../../assets/video/landscapeVs_bg.mp4";
 import Dataviz from "../../assets/video/DatavizB.mp4";
@@ -27,48 +28,18 @@ const OutsidePro = () => {
     <div className="bg-Background overflow-x-hidden">
       <div className={`${styles.flexStart}`}>
         <div className="md:max-w-[70%] max-w-[90%] w-full">
-          <div className="flex flex-col justify-center text-white pt-20">
-            <h2 className=" text-lg font-body font-bold text-Rose">
-              UX Design
-            </h2>
-            <h1 className="md:text-6xl text-5xl font-bold font-display">
-              Outside
-            </h1>
-            <p className="pt-2 font-body">
-              A motivational app that encourages people to get out of the house
-              by utilizing data visualizations, recommendations, and an adaptive
-              visual design that becomes more beautiful as the user meets their
-              goals.
-            </p>
-            <div>
-              <div className="flex sm:flex-row flex-col justify-between gap-x-4 my-12">
-                <div className="flex flex-col sm:max-w-[15rem] font-body">
-                  <h3 className="md:text-lg text-md font-bold opacity-50">
-                    Project Type
-                  </h3>
-                  <p>Masters Project</p>
-                </div>
-                <div className="flex flex-col sm:max-w-[15rem] sm:pt-0 pt-4 font-body">
-                  <h3 className="md:text-lg text-md font-bold opacity-50">
-                    Role
-                  </h3>
-                  <p>UX Designer</p>
-                </div>
-                <div className="flex flex-col sm:max-w-[15rem] sm:pt-0 pt-4 font-body">
-                  <h3 className="md:text-lg text-md font-bold opacity-50">
-                    Team
-                  </h3>
-                  <p>Solo</p>
-                </div>
-                <div className="flex flex-col sm:max-w-[15rem] sm:pt-0 pt-4 font-body">
-                  <h3 className="md:text-lg text-md font-bold opacity-50">
-                    Duration
-                  </h3>
-                  <p>Nov 2021 - May 2022</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <CaseStudyHeader
+            category="UX Design"
+            categoryColor="text-Rose"
+            title="Outside"
+            description="A motivational app that encourages people to get out of the house by utilizing data visualizations, recommendations, and an adaptive visual design that becomes more beautiful as the user meets their goals."
+            meta={[
+              { label: "Project Type", value: "Masters Project" },
+              { label: "Role", value: "UX Designer" },
+              { label: "Team", value: "Solo" },
+              { label: "Duration", value: "Nov 2021 - May 2022" },
+            ]}
+          />
 
           <Img imgSrc={Mockup} imgStyle={"object-cover w-full max-h-[39rem]"} />
 

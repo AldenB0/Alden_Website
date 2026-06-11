@@ -2,7 +2,12 @@ import "../../index.css";
 import styles from "../../style";
 import { Icon } from "@iconify/react";
 import { Footer } from "../../components";
-import { Section, Img, Video } from "../../components/ProjectElements";
+import {
+  Section,
+  Img,
+  Video,
+  CaseStudyHeader,
+} from "../../components/ProjectElements";
 import {
   OldToNew,
   Timeline,
@@ -38,76 +43,60 @@ const Coverage = () => {
     <div className="bg-Background overflow-x-hidden ">
       <div className={`${styles.flexStart}`}>
         <div className="md:max-w-[70%] max-w-[90%] w-full">
-          <div className="flex flex-col justify-center text-white pt-20">
-            <h2 className=" text-lg font-body font-bold text-Blue">
-              UX Design
-            </h2>
-            <h1 className="md:text-6xl text-5xl font-bold font-display">
-              mCODE Coverage Checker
-            </h1>
-            <p className="pt-2 font-body">
-              A tool designed to enable a given health system to understand how
-              much of the mCODE standard* they support through an intuitive
-              dashboard and data upload system. <br /> <br />{" "}
-              <span className="opacity-75">
-                *An open-source standard for Oncology health data positioning
-                itself to replace the current EHR systems{" "}
-              </span>
-            </p>
-            <div>
-              <div className="flex sm:flex-row flex-col justify-between gap-x-4 my-12">
-                <div className="flex flex-col sm:max-w-[15rem] font-body">
-                  <h3 className="md:text-lg text-md font-bold opacity-50">
-                    Role
-                  </h3>
-                  <p>Designer</p>
-                </div>
-                <div className="flex flex-col sm:max-w-[15rem] sm:pt-0 pt-4 font-body">
-                  <h3 className="md:text-lg text-md font-bold opacity-50">
-                    Team
-                  </h3>
-                  <p>Solo</p>
-                </div>
-                <div className="flex flex-col sm:max-w-[15rem] sm:pt-0 pt-4 font-body">
-                  <h3 className="md:text-lg text-md font-bold opacity-50">
-                    Duration
-                  </h3>
-                  <p>February 2021 - June 2022</p>
-                </div>
-                <div className="flex flex-col sm:max-w-[15rem] sm:pt-0 pt-4 font-body">
-                  <h3 className="md:text-lg text-md font-bold opacity-50">
-                    Completed Project
-                  </h3>
-                  <a
-                    href="https://github.com/mcode/mcode-coverage-checker"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center pb-1"
-                  >
-                    <Icon
-                      icon="mdi:github"
-                      style={{ width: "30px", height: "30px" }}
-                      className="icon pr-2"
-                    />
-                    Github
-                  </a>
-                  <a
-                    href="https://mcode.github.io/mcode-coverage-checker/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center "
-                  >
-                    <Icon
-                      icon="bi:fire"
-                      style={{ width: "30px", height: "30px" }}
-                      className="icon pr-2"
-                    />
-                    Website
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <CaseStudyHeader
+            category="UX Design"
+            categoryColor="text-Blue"
+            title="mCODE Coverage Checker"
+            description={
+              <>
+                A tool designed to enable a given health system to understand
+                how much of the mCODE standard* they support through an
+                intuitive dashboard and data upload system. <br /> <br />{" "}
+                <span className="opacity-75">
+                  *An open-source standard for Oncology health data positioning
+                  itself to replace the current EHR systems{" "}
+                </span>
+              </>
+            }
+            meta={[
+              { label: "Role", value: "Designer" },
+              { label: "Team", value: "Solo" },
+              { label: "Duration", value: "February 2021 - June 2022" },
+              {
+                label: "Completed Project",
+                content: (
+                  <>
+                    <a
+                      href="https://github.com/mcode/mcode-coverage-checker"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center pb-1"
+                    >
+                      <Icon
+                        icon="mdi:github"
+                        style={{ width: "30px", height: "30px" }}
+                        className="icon pr-2"
+                      />
+                      Github
+                    </a>
+                    <a
+                      href="https://mcode.github.io/mcode-coverage-checker/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center "
+                    >
+                      <Icon
+                        icon="bi:fire"
+                        style={{ width: "30px", height: "30px" }}
+                        className="icon pr-2"
+                      />
+                      Website
+                    </a>
+                  </>
+                ),
+              },
+            ]}
+          />
 
           <Video
             src={mCodeVid}
@@ -363,20 +352,3 @@ const Coverage = () => {
 };
 
 export default Coverage;
-
-/*  
-Section:
-  title,
-  callout,
-  text,
-
-Img:
-  imgSrc,
-  altText,
-  imgStyle,
-
-Highlight:
-  color, 
-  title, 
-  text
-*/

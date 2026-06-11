@@ -1,25 +1,23 @@
-import React, { useEffect } from "react";
-import { useRive, useStateMachineInput } from "rive-react";
+import React from "react";
+import { useRive } from "rive-react";
 import riveAnimation from "./animations/star_rating.riv";
 
+/**
+ * RiveStar — experiment: self-contained interactivity.
+ *
+ * `automaticallyHandleEvents` lets the .riv's state machine handle
+ * pointer input (hover/click on each star) with no React wiring at all.
+ */
 const RiveStar = () => {
-  const { RiveComponent, rive } = useRive({
+  const { RiveComponent } = useRive({
     src: riveAnimation,
     stateMachines: "State Machine 1",
     automaticallyHandleEvents: true,
     autoplay: true,
   });
 
-  useEffect(() => {
-    if (rive) {
-      console.log("Rive contents:", rive);
-      console.log("Available animations:", rive.animationNames);
-      console.log("Available state machines:", rive.stateMachineNames);
-    }
-  }, [rive]);
-
   return (
-    <div className="w-full h-[600px]">
+    <div className="w-full h-full">
       <RiveComponent />
     </div>
   );

@@ -1,31 +1,19 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useRive, useStateMachineInput } from "rive-react";
 import riveExample from "./animations/hamburger_time.riv";
 
 /**
- * RiveTest Component
+ * RiveTest — experiment: firing a trigger input from React.
  *
- * Features:
- * - Displays Rive animation
- * - Logs rive contents to console
- * - Handles click interactions
+ * The state machine exposes a "Switch" trigger; calling .fire() from an
+ * onClick shows how React events can drive a Rive state machine directly.
  */
-
 const RiveTest = () => {
   const { RiveComponent, rive } = useRive({
     src: riveExample,
     stateMachines: "Basic State Machine",
     autoplay: true,
   });
-
-  // Log the Rive contents to the console
-  useEffect(() => {
-    if (rive) {
-      console.log("Rive contents:", rive);
-      console.log("Available animations:", rive.animationNames);
-      console.log("Available state machines:", rive.stateMachineNames);
-    }
-  }, [rive]);
 
   const onClickInput = useStateMachineInput(
     rive,
@@ -34,7 +22,7 @@ const RiveTest = () => {
   );
 
   return (
-    <div className="w-full h-[400px]">
+    <div className="w-full h-full">
       <RiveComponent onClick={() => onClickInput?.fire()} />
     </div>
   );

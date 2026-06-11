@@ -1,16 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Icon } from "@iconify/react";
 import "../index.css";
-import ClipboardJS from "clipboard";
 import { toast, ToastContainer, cssTransition } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Footer() {
-  useEffect(() => {
-    // Initialize ClipboardJS library
-    new ClipboardJS(".icon-email");
-  }, []);
-
   const handleClick = () => {
     // Copy email address to clipboard
     const email = "aldenjohnsonbrown@gmail.com";
@@ -35,6 +29,11 @@ function Footer() {
     });
 
   const [clicked, setClicked] = useState(false);
+  const clickTimer = useRef(null);
+
+  useEffect(() => {
+    return () => clearTimeout(clickTimer.current);
+  }, []);
 
   return (
     <>
@@ -74,24 +73,31 @@ function Footer() {
           </h2>
           <div className="flex justify-center">
             <ul className="flex justify-between list-none text-center font-bold font-body text-white py-5 w-72">
-              <Icon
-                icon="ic:round-email"
-                style={{ width: "25px", height: "25px" }}
-                className={`icon cursor-pointer ${clicked ? "clicked" : ""}`}
+              <button
+                type="button"
+                aria-label="Copy email address to clipboard"
                 onClick={() => {
                   handleClick();
                   notify();
                   setClicked(true);
-                  setTimeout(() => {
+                  clearTimeout(clickTimer.current);
+                  clickTimer.current = setTimeout(() => {
                     setClicked(false);
                   }, 300);
                 }}
-              />
+              >
+                <Icon
+                  icon="ic:round-email"
+                  style={{ width: "25px", height: "25px" }}
+                  className={`icon cursor-pointer ${clicked ? "clicked" : ""}`}
+                />
+              </button>
 
               <a
                 href="https://www.linkedin.com/in/alden-brown/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn profile"
               >
                 <Icon
                   icon="ri:linkedin-fill"
@@ -103,6 +109,7 @@ function Footer() {
                 href="https://drive.google.com/file/d/1xWwApoATRWt_vNbQ331tmdIq2qcdaY0T/view?usp=share_link"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Resume"
               >
                 <Icon
                   icon="mdi:resume"

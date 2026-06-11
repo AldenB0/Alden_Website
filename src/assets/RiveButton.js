@@ -2,9 +2,15 @@ import React, { useEffect } from "react";
 import { useRive, EventType } from "rive-react";
 import riveAnimation from "./animations/Button.riv";
 
-// Example of event logging
-
-const RiveButton = () => {
+/**
+ * RiveButton — experiment: listening to Rive-reported events.
+ *
+ * The .riv file fires named events (click, hover-on, hover-off) from its
+ * state machine; subscribing via rive.on(EventType.RiveEvent) lets React
+ * react to what happens *inside* the animation. The optional onEvent prop
+ * receives each event name.
+ */
+const RiveButton = ({ onEvent }) => {
   const { RiveComponent, rive } = useRive({
     src: riveAnimation,
     stateMachines: "Button animation",
@@ -13,41 +19,20 @@ const RiveButton = () => {
 
   useEffect(() => {
     if (rive) {
-      // Define the event handler
       const handleRiveEvent = (event) => {
-        const eventName = event.data.name;
-        console.log(`Event triggered: ${eventName}`);
-
-        switch (eventName) {
-          case "click":
-            console.log("Click event detected!");
-            // Add your click event logic here
-            break;
-          case "hover-on":
-            console.log("Hover-on event detected!");
-            // Add your hover-on event logic here
-            break;
-          case "hover-off":
-            console.log("Hover-off event detected!");
-            // Add your hover-off event logic here
-            break;
-          default:
-            console.log(`Unhandled event: ${eventName}`);
-        }
+        onEvent?.(event.data.name);
       };
 
-      // Subscribe to Rive events
       rive.on(EventType.RiveEvent, handleRiveEvent);
 
-      // Cleanup event listener on component unmount
       return () => {
         rive.off(EventType.RiveEvent, handleRiveEvent);
       };
     }
-  }, [rive]);
+  }, [rive, onEvent]);
 
   return (
-    <div className="w-full h-[600px]">
+    <div className="w-full h-full">
       <RiveComponent />
     </div>
   );

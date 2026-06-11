@@ -10,7 +10,7 @@ class Arrow extends React.Component {
 
   componentDidMount() {
     // Load event listener for the Lottie player
-    this.myRef.current.addEventListener("load", () => {
+    this.handleLoad = () => {
       // Configuration for Lottie Interactivity library
       create({
         mode: "scroll",
@@ -23,7 +23,12 @@ class Arrow extends React.Component {
           },
         ],
       });
-    });
+    };
+    this.myRef.current.addEventListener("load", this.handleLoad);
+  }
+
+  componentWillUnmount() {
+    this.myRef.current?.removeEventListener("load", this.handleLoad);
   }
 
   render() {

@@ -9,7 +9,7 @@ class Logo extends React.Component {
   }
   componentDidMount() {
     // 3. listen for player load. see lottie player repo for other events
-    this.myRef.current.addEventListener("load", function (e) {
+    this.handleLoad = function (e) {
       // 4. configure the interactivity library
       create({
         mode: "chain",
@@ -28,7 +28,11 @@ class Logo extends React.Component {
           },
         ],
       });
-    });
+    };
+    this.myRef.current.addEventListener("load", this.handleLoad);
+  }
+  componentWillUnmount() {
+    this.myRef.current?.removeEventListener("load", this.handleLoad);
   }
   render() {
     return (

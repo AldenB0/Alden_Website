@@ -2,16 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  background-color: #1E1E1F;
+/*
+  Design tokens — single source of truth for the site palette.
+  Values are space-separated RGB triples consumed by tailwind.config.js
+  (rgb(var(--color-*) / <alpha-value>)). Swap the palette by editing
+  these values; a future theme switcher only needs to redefine this block
+  (e.g. under a [data-theme="..."] selector).
+*/
+:root {
+  --color-background: 30 30 31; /* #1e1e1f */
+  --color-surface: 57 57 58; /* #39393a */
+  --color-text-muted: 210 210 210; /* #d2d2d2 */
+  --color-cream: 252 246 236; /* #fcf6ec */
+  --color-rose: 242 140 149; /* #f28c95 */
+  --color-green: 13 175 121; /* #0daf79 */
+  --color-yellow: 255 193 94; /* #ffc15e */
+  --color-blue: 67 129 193; /* #4381c1 */
+}
+
+html,
+body {
+  background-color: rgb(var(--color-background));
 }
 
 ul {
   list-style-type: disc;
   margin-left: 1rem;
 }
-
-
 
 /* bounce in keyframes */
 @keyframes about {
@@ -31,7 +48,7 @@ ul {
         transform: translate(0px, 2px);
         opacity: 100;
     }
-} 
+}
 
 @keyframes about-reverse {
   0% {
@@ -43,25 +60,6 @@ ul {
     transform: translateY(20px);
   }
 }
-
-@keyframes imghover {
-    0.0%{
-        transform: translate(0px, 40px);
-        opacity: 100;
-    }
-    100%{
-        transform: translate(0px, 0px);
-        opacity: 100;
-    }
-    50%{
-        transform: translate(0px, -3px);
-        opacity: 100;
-    }
-    78.5%{
-        transform: translate(0px, 2px);
-        opacity: 100;
-    }
-} 
 
 .video {
   transition: all 500ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
@@ -94,21 +92,6 @@ ul {
 
 .fade-in-rev {
   animation: about-reverse 0.3s ease-in-out forwards;
-}
-
-@keyframes menu-fade-out {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(10px); /* Reduced distance for faster visual effect */
-  }
-}
-
-.menu-fade-out {
-  animation: menu-fade-out 0.2s ease-in-out forwards;
 }
 /* bounce in keyframes end*/
 
@@ -147,143 +130,81 @@ ul {
 .nav_anim :hover:after, .nav_anim :focus:after {
   transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
 }
-/* hero animation*/
-
-.hero-text1 { 
-  animation: about .75s ease .55s backwards
-}
-.hero-text2 { 
-  animation: about .75s ease .6s backwards
-}
-.hero-text3 { 
-  animation: about .75s ease .65s backwards
-}
-.hero-text4 { 
-  animation: about .75s ease .9s backwards
-}
-.hero-text5 { 
-  animation: about .75s ease .95s backwards
-}
-.hero-text6 { 
-  animation: about .75s ease 1s backwards
-}
-.hero-text7 { 
-  animation: about .75s ease 1.3s backwards
+/* hero animation
+   Elements stay hidden until React adds .hero-ready to the section (fired
+   when the Face Lottie finishes loading — see Hero.js). Delays below are a
+   stagger relative to that moment; tune the overall lead-in with the
+   variable. */
+:root {
+  --hero-intro-delay: 0.38s;
 }
 
-.face-anim { 
-  animation: about .75s ease .65s backwards
+.hero-text1,
+.hero-text2,
+.hero-text3,
+.hero-text4,
+.hero-text5,
+.hero-text6,
+.hero-text7,
+.face-anim {
+  opacity: 0;
+}
+
+.hero-ready .hero-text1 {
+  animation: about .75s ease calc(var(--hero-intro-delay) + 0s) both;
+}
+.hero-ready .hero-text2 {
+  animation: about .75s ease calc(var(--hero-intro-delay) + 0.05s) both;
+}
+.hero-ready .hero-text3 {
+  animation: about .75s ease calc(var(--hero-intro-delay) + 0.1s) both;
+}
+.hero-ready .hero-text4 {
+  animation: about .75s ease calc(var(--hero-intro-delay) + 0.35s) both;
+}
+.hero-ready .hero-text5 {
+  animation: about .75s ease calc(var(--hero-intro-delay) + 0.4s) both;
+}
+.hero-ready .hero-text6 {
+  animation: about .75s ease calc(var(--hero-intro-delay) + 0.45s) both;
+}
+.hero-ready .hero-text7 {
+  animation: about .75s ease calc(var(--hero-intro-delay) + 0.75s) both;
+}
+
+.hero-ready .face-anim {
+  animation: about .75s ease calc(var(--hero-intro-delay) + 0.1s) both;
 }
 .my-toast .Toastify__toast {
   border-radius: 50px;
-  background-color: #39393A;
+  background-color: rgb(var(--color-surface));
 }
 
+.arrowFloat {
+  bottom: 0;
+  animation: float 3s ease-in-out infinite;
+}
 
-/* code snippits from tutorial */
-:root {
-    --black-gradient: linear-gradient(
-      144.39deg,
-      #ffffff -278.56%,
-      #6d6d6d -78.47%,
-      #11101d 91.61%
-    );
-    --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+@keyframes float {
+  0% {
+    transform: translateY(0px);
   }
-  
-  
-  .bg-black-gradient {
-    background: linear-gradient(
-      144.39deg,
-      #c0c0c1 -278.56%,
-      #858586 -78.47%,
-      #1E1E1F 91.61%
-    );
+  50% {
+    transform: translateY(-10px);
   }
-  
-  .box-shadow {
-    box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+  100% {
+    transform: translateY(0px);
   }
-  
-  .sidebar {
-    -webkit-animation: about 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: about 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
-  .reverse-sidebar {
-    -webkit-animation: reverse-about 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: reverse-about 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation-delay: 0.5s; /* same duration as the pop-in animation */
-  }
-  
-  @-webkit-keyframes slide-top {
-    0% {
-      -webkit-transform: translateY(100px);
-      transform: translateY(100px);
-    }
-    100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes slide-top {
-    0% {
-      -webkit-transform: translateY(100px);
-      transform: translateY(100px);
-    }
-    100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-  }
+}
 
-  .arrowFloat {
-    bottom: 0;
-    animation: float 3s ease-in-out infinite;
+/* Respect the user's OS-level reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
-
-  @keyframes float {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-  
-  .feature-card:hover {
-    background: var(--black-gradient);
-    box-shadow: var(--card-shadow);
-  }
-  
-  .feedback-container .feedback-card:last-child {
-    margin-right: 0px;
-  }
-  
-  .feedback-card {
-    background: transparent;
-  }
-  
-  .feedback-card:hover {
-    background: var(--black-gradient);
-  }
-  
-  .blue__gradient {
-    background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
-    filter: blur(123px);
-  }
-  
-  .pink__gradient {
-    background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
-    filter: blur(900px);
-  }
-  
-  .text__gradient {
-    background-image: linear-gradient(170deg, #F0A8AF 0%, #C22541 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
+}

@@ -19,24 +19,24 @@ const Section = ({
       <p className="md:text-4xl text-2xl font-bold font-display my-3">
         {callout}
       </p>
-      <p className="font-body md:text-lg text-md">{text}</p>
+      <p className="font-body md:text-lg text-base">{text}</p>
       {listItems.length > 0 && (
-        <ul className="md:text-lg text-md font-body pt-5 font-bold">
+        <ul className="md:text-lg text-base font-body pt-5 font-bold">
           {listItems.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
       )}
-      <p className="font-body md:text-lg text-md pt-5">{text2}</p>
+      <p className="font-body md:text-lg text-base pt-5">{text2}</p>
       {(pros.length > 0 || cons.length > 0) && (
         <div>
           <div className="flex flex-row justify-between">
             {pros.length > 0 && (
               <div className="flex flex-col font-body">
-                <h3 className="md:text-lg text-md font-bold opacity-50 mt-5">
+                <h3 className="md:text-lg text-base font-bold opacity-50 mt-5">
                   {protitle}
                 </h3>
-                <ul className="md:text-lg text-md font-body pt-3 max-w-xl">
+                <ul className="md:text-lg text-base font-body pt-3 max-w-xl">
                   {pros.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
@@ -45,10 +45,10 @@ const Section = ({
             )}
             {cons.length > 0 && (
               <div className="flex flex-col font-body">
-                <h3 className="md:text-lg text-md font-bold opacity-50 mt-5">
+                <h3 className="md:text-lg text-base font-bold opacity-50 mt-5">
                   {constitle}
                 </h3>
-                <ul className="md:text-lg text-md font-body pt-3 max-w-xl">
+                <ul className="md:text-lg text-base font-body pt-3 max-w-xl">
                   {cons.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
